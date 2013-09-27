@@ -1,0 +1,176 @@
+div.meta {
+    border-bottom: 1px dashed #46a546;
+}
+
+div.teaser p {
+    text-align: justify;
+}
+
+div.teaser img {
+    float: left;
+    margin: 4px;
+    padding: 1px;
+    border: 1px solid;
+    max-width: 27%;
+    height: auto;
+}
+
+img.alignleft, img.alignright {
+    margin: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+div.entry img {
+    max-width: 95%;
+    height: auto;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 10px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 10px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ol.commentlist {
+    list-style: none;
+    margin: 4px;
+    padding: 0;
+}
+
+ol.commentlist li {
+    border-bottom: 1px solid #55B02B;
+}
+
+ol.commentlist li div.reply {
+    text-align: right;
+}
+
+body form input#s {
+    margin: auto;
+    padding: 3px;
+    border: 1px solid #ededed;
+    background: #fff;
+    color: #222;
+    width: 65%;
+    margin-left: 5px;
+}
+
+body form input#searchsubmit {
+    margin: 5px auto;
+    padding: 3px;
+    border: 1px solid #c3c3c3;
+    background: #e3e3e3;
+    color: #555;
+    width: 20%;;
+}
+
+div#respond form input#submit {
+    display: block;
+    margin: 5px auto;
+}
+
+body form input#author,
+body form input#email,
+body form input#url {
+    width: 98%;
+    display: block;
+    margin: auto;
+}
+
+div#respond form textarea#comment {
+    width: 98%;
+    display: block;
+    margin: 4px auto;
+}
+
+.iz-box ul {
+    margin: 10px;
+    padding-left: 0.5em;
+    list-style-type: disc;
+    /*list-style-position: outside;*/
+}
+
+.iz-box li {
+    border-top: 1px solid #fff;
+    height: auto;
+    line-height: 23px;
+}
+
+.iz-box li:hover {
+    background: #fdfdfd;
+    cursor: pointer;
+}
+
+.iz-box label{
+    display: none;
+}
+.super_recent_posts_item{
+    background: #f0f0f0;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #fff;
+    height: 60px;
+    line-height: 22px;
+}
+
+.super_recent_posts_item:hover {
+    background: #fdfdfd;
+    cursor: pointer;
+}
+
+.iz-content-body .messageContent{
+    line-height: 19px;
+}
+
+.iz-content-body .messageContent .bt-downfree{
+    background: #36c766;
+    border-radius: 4px;
+    padding: 8px 10px;
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+
+.iz-content-body .messageContent .bt-downfree:hover {
+    background: #d24d33;
+}
+
+.iz-content-body .messageContent .bt-downfree a {
+    background: url(http://gamemobihay.com/wp-content/uploads/2013/09/icon-download.gif) no-repeat left -1px;
+    padding-left: 40px;
+    color: #fff !important;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.tag a{
+    font-size: 12px;
+}
+
+.aligncenter, dl.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 4px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
