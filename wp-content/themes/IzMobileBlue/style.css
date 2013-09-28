@@ -121,12 +121,23 @@ a:hover {
 	right:0;
 }
 .iz-title {
-   background: #2E363F;
     color: #FFFFFF;
     height: auto;
     min-height: 22px;
     padding: 5px 0 0 5px;
+    background-image: linear-gradient(bottom, rgb(157,59,193) 13%, rgb(195,108,219) 77%);
+    background-image: -o-linear-gradient(bottom, rgb(157,59,193) 13%, rgb(195,108,219) 77%);
+    background-image: -moz-linear-gradient(bottom, rgb(157,59,193) 13%, rgb(195,108,219) 77%);
+    background-image: -webkit-linear-gradient(bottom, rgb(157,59,193) 13%, rgb(195,108,219) 77%);
+    background-image: -ms-linear-gradient(bottom, rgb(157,59,193) 13%, rgb(195,108,219) 77%);
 
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.13, rgb(157,59,193)),
+        color-stop(0.77, rgb(195,108,219))
+    );
 }
 .iz-title h2,.iz-title h1,.iz-title h1 a{
 	color: #FFFFFF;
@@ -136,13 +147,15 @@ a:hover {
 .iz-title h2 img,.iz-title h1 img{
 	vertical-align: text-top;
 }
+
+.iz-content{
+    background: #fff;
+}
+
 .iz-content .iz-label{
-    font-family: Helvetica,sans-serif;
-    font-size: 12px;
-    margin: 0;
-    padding: 4px 5px 2px;
-	clear:both;
-	border-bottom: 1px dashed #DDDDDD;
+    border: 1px solid #dfdfdf;
+    padding: 6px;
+    border-top: none;
 }
 .iz-content .iz-label h3 {
     font-size: 12px;
@@ -157,7 +170,9 @@ a:hover {
     margin: 0;
 }
 .iz-content .iz-label h3 a ,.iz-download .iz-download-link{
-    color: #609CBE;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
 }
 .iz-download-link img{
 	vertical-align: middle;
@@ -171,15 +186,15 @@ a:hover {
 }
 .iz-content .iz-label .iz-label-img{
 	float:left;
-	margin-right: 3px;
+	margin-right: 5px;
 }
 .iz-content .iz-label .iz-label-img img {
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 10px 10px 10px 10px;
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
 	box-shadow: 0 0 5px #888;
-    width: 32px;
-    height: 32px;
+    width: 80px;
+    height: 80px;
 }
 .iz-content .iz-label .iz-label-title-h2{
 	float:left;
@@ -187,6 +202,16 @@ a:hover {
 .iz-label-title-h2 a{
     font-weight: bold;
 }
+
+.iz-label a{
+    color: #fff;
+}
+
+.iz-label .btn-download{
+    position: absolute;
+    bottom: 36px;
+}
+
 .iz-download .iz-download-spes,.iz-download-views {
 	color:#888888;
 	line-height: 1.3;
@@ -196,20 +221,54 @@ a:hover {
 }
 .iz-box .iz-content-meta{
 	display:block;
-	border-bottom: 1px dashed #888888;
+	border-bottom: 1px solid #888888;
 	padding:5px;
-	background:#E9E9E9;
-	color:#888888;
+	background:#F0F0F0;
+	color: #000000;
+    height: 109px;
+    position: relative;
 }
+
+.iz-content-meta img{
+    float: left;
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    margin-right: 7px;
+    border: 2px solid #00589c;
+}
+
+.iz-content-meta .btn-download{
+    position: absolute;
+    bottom: 6px;
+}
+
+.iz-content-meta a{
+    color: #fff;
+    float: left;
+}
+
+.iz-content-meta a:hover{
+    color: #fff;
+}
+
 .iz-box .iz-content-body{
-    padding: 0 5px 13px 6px;
+    padding: 2px 5px 13px 6px;
 }
 .iz-post-title{
     font-size: 18px;
     margin-bottom: 5px;
     font-weight: bold;
-    border-bottom: 1px dashed #888888;
     padding: 5px;
+    width: 600px;
+}
+.iz-content-meta .div1{
+    width: 78px;
+    height: 70px;
+    float: left;
+}
+.iz-content-meta .div2{
+    float: left;
 }
 .iz-post-title a{
 	padding-left: 15px;
@@ -300,4 +359,42 @@ a:hover {
 #gioithieu .viewmore i.active {
     background-position: 0 8px;
     bottom: 5px;
+}
+
+.iz-desc{
+    margin-bottom: 3px;
+    margin-left: 73px;
+    margin-top: 3px;
+}
+
+.btn-download{
+    border-radius: 6px;
+    padding: 5px 10px 6px;
+    color: #FFF;
+    border-top-color: #1992da;
+    border-left-color: #0c75bb;
+    border-right-color: #0c75bb;
+    border-bottom-color: #00589c;
+    -webkit-box-shadow: inset 0 1px 1px 0 #6fc5f5;
+    -moz-box-shadow: inset 0 1px 1px 0 #6fc5f5;
+    box-shadow: inset 0 1px 1px 0 #6fc5f5;
+    background: #117ed2;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#37aaea",endColorstr="#117ed2");
+    background: -webkit-gradient(linear,left top,left bottom,from(#37aaea),to(#117ed2));
+    background: -moz-linear-gradient(top,#37aaea,#117ed2);
+    background-image: -o-linear-gradient(top,#37aaea 0,#117ed2 100%);
+    background-image: linear-gradient(to bottom,#37aaea 0,#117ed2 100%);
+}
+
+.btn-download:hover{
+    padding: 5px 10px 6px;
+    background: #1c5bad;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2488d4",endColorstr="#1c5bad");
+    background: -webkit-gradient(linear,left top,left bottom,from(#2488d4),to(#1c5bad));
+    background: -moz-linear-gradient(top,#2488d4,#1c5bad);
+    background-image: -o-linear-gradient(top,#2488d4 0,#1c5bad 100%);
+    background-image: linear-gradient(to bottom,#2488d4 0,#1c5bad 100%);
+    -webkit-box-shadow: inset 0 1px 1px 0 #64bef1;
+    -moz-box-shadow: inset 0 1px 1px 0 #64bef1;
+    box-shadow: inset 0 1px 1px 0 #64bef1;
 }

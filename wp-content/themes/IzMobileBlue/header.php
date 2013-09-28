@@ -31,12 +31,6 @@
 		<div class="iz-container">
 			<div class="iz-header">
 				<div class="iz-topmenu">
-					<ul class="iz-menu-ul">
-						<li><a href="/">Home</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/game-mobile-offline/">Game offline</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/game-mobile-online/">Game online</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/ung-dung/">Ứng dụng</a></li>
-					</ul>
 					<div class="clear"></div>
                     <div id="logo">
                         <div style="text-align: center" class="logo-hd"><a href="http://gamemobihay.com/"> <img src="http://gamemobihay.com/wp-content/uploads/2013/09/logo.png" style="width: 197px;" alt="GameMobiHay"></a><br><b>TẢI GAME HOÀN TOÀN MIỄN PHÍ</b>. </div>
