@@ -178,15 +178,17 @@ a:hover {
 	vertical-align: middle;
 }
 .iz-download {
-	margin-bottom:3px;
+    margin-bottom: 3px;
+    height: 26px;
+    width: 120px;
+    margin-left: 87px;
+    margin-top: 5px;
 }
 .iz-download .iz-file{
 	 background: url("images/download.png") no-repeat scroll 0 50% #FFFFFF;
 	 padding-left:17px;
 }
 .iz-content .iz-label .iz-label-img{
-	float:left;
-	margin-right: 5px;
 }
 .iz-content .iz-label .iz-label-img img {
     border-radius: 10px 10px 10px 10px;
@@ -195,6 +197,8 @@ a:hover {
 	box-shadow: 0 0 5px #888;
     width: 80px;
     height: 80px;
+    margin-top: 4px;
+    float: left;
 }
 .iz-content .iz-label .iz-label-title-h2{
 	float:left;
@@ -208,8 +212,6 @@ a:hover {
 }
 
 .iz-label .btn-download{
-    position: absolute;
-    bottom: 36px;
 }
 
 .iz-download .iz-download-spes,.iz-download-views {
@@ -225,7 +227,7 @@ a:hover {
 	padding:5px;
 	background:#F0F0F0;
 	color: #000000;
-    height: 109px;
+    height: 106px;
     position: relative;
 }
 
@@ -235,7 +237,9 @@ a:hover {
     height: 68px;
     border-radius: 10px;
     margin-right: 7px;
-    border: 2px solid #00589c;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
 }
 
 .iz-content-meta .btn-download{
@@ -363,8 +367,9 @@ a:hover {
 
 .iz-desc{
     margin-bottom: 3px;
-    margin-left: 73px;
-    margin-top: 3px;
+    margin-left: 86px;
+    font-size: 12px;
+    height: 63px;
 }
 
 .btn-download{

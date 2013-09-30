@@ -46,6 +46,9 @@ class Iz_Box_Content_Game extends WP_Widget
 				?>
 					<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($the_post->ID) ); ?>
 					<div class="iz-label">
+                        <h3 class="iz-label-title">
+                            <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
+                        </h3>
 						<a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes(the_title()); ?>">
 							<?php if (has_post_thumbnail()) : ?>
 								<img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes(the_title()); ?> " />
@@ -53,9 +56,7 @@ class Iz_Box_Content_Game extends WP_Widget
 								<img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes(the_title()); ?> "/>
 							<?php endif; ?>
 						</a>
-						<h3 class="iz-label-title">
-							<a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
-						</h3>
+
 						<?php
 								$downloadID =0;
 								$categoryID = 1;
