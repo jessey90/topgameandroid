@@ -22,7 +22,7 @@
             </div>
             <div class="div2">
                 <span>
-                    <!--để gì tính sau-->
+				    <span class="iz-download-views"><?php if(function_exists('the_views')) { the_views(); } ?></span>
                 </span>
                 <!--            <span style="float: left">Đăng ngày: <?php /*the_time('d/m/Y'); */?> bởi <b><?php /*the_author(); */?></b></span>-->
                 <a class="btn-download" href="<?php the_field('link_download_game'); ?>">TẢI MIỄN PHÍ</a>

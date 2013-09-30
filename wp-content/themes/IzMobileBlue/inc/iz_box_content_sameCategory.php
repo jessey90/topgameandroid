@@ -39,18 +39,29 @@ class Iz_Box_Content_sameCategory extends WP_Widget
 			while ($my_query->have_posts()): 
 				$my_query->the_post();
 				$do_not_duplicate = $post->ID;
+                $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 				?>
 				<div class="iz-label">
 					<h3 class="iz-label-title-h2">
-						<img src="<?php echo $file_img_list;?>" alt="<?php echo strip_shortcodes(the_title()); ?>"/>
-						<a title="<?php echo strip_shortcodes(the_title()); ?>" href="<?php the_permalink() ?>"><?php echo strip_shortcodes(the_title()); ?></a>
+                        <a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
+                            <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php echo $feat_image; ?>" style="width: 40px;height: 40px" alt="<?php  echo strip_shortcodes($recent['post_title']); ?>" />
+                            <?php else : ?>
+                            <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> "/>
+                            <?php endif; ?>
+                        </a>
+						<a title="<?php echo strip_shortcodes(the_title()); ?>" style="font-size:12px;margin-left: 6px;" href="<?php the_permalink() ?>"><?php echo strip_shortcodes(the_title()); ?></a>
 					</h3>
 				<div class="clear"></div>
+                    <div class="iz-download">
+                        <div id="game_lien_quan">
+                            <a class="btn-download" href="<?php the_field('link_download_game',$recent['ID']); ?>">TẢI MIỄN PHÍ</a>
+                        </div>
+                    </div>
 				</div>
 				<?php
 			endwhile;
 		?>
-		</div>
 	<?php
 		echo $after_widget;
     }

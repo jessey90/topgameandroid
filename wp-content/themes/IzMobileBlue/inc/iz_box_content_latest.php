@@ -28,9 +28,9 @@ class Iz_Box_Content_Latest extends WP_Widget
         <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent['ID'])); ?>
 		<div class="iz-label">
             <h3 class="iz-label-title">
-                <a title="<?php echo esc_attr($recent['post_title']);?>" href="<?php the_permalink() ?>"><?php echo $recent['post_title']; ?></a>
+                <a title="<?php echo esc_attr($recent['post_title']);?>" href="<?php echo get_permalink($recent['ID']); ?>"><?php echo $recent['post_title']; ?></a>
             </h3>
-            <a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
+            <a class="iz-label-img"href="<?php echo get_permalink($recent['ID']); ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
                 <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> " />
                 <?php else : ?>
@@ -38,10 +38,11 @@ class Iz_Box_Content_Latest extends WP_Widget
                 <?php endif; ?>
             </a>
             <div class="iz-desc">
-                <?php the_field('mo_ta');?>
+                <?php
+                the_field( 'mo_ta', $recent['ID']);?>
             </div>
             <div class="iz-download">
-                <a class="btn-download" href="<?php the_field('link_download_game'); ?>">TẢI MIỄN PHÍ</a>
+                <a class="btn-download" href="<?php the_field('link_download_game',$recent['ID']); ?>">TẢI MIỄN PHÍ</a>
             </div>
         </div>
 		<?php

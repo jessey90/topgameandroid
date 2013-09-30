@@ -1,4 +1,5 @@
-<div class="title"> 
+<!--Category trang của theme này lại hiển thị ở archive.php-->
+<div class="title">
 	<span style="float: left"> 
 		<img src="http://nqdung2306.hayday.mobi/static/icon/2012/11/09/2c759287aca4311c09f06ef2c128f60c1352431306_qybv1.png" alt="Top hot"> 
 	</span> 
