@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-	<title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name').'| Tải game hot cho điện thoại'; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
+	<title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name')."| Tải game hot cho điện thoại"; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
 	<meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -40,7 +40,7 @@
                 <div id="filter_game">
                     <div class="chia3">
                         <div class="center">
-                            <a href="#">
+                            <a href="<?php bloginfo(url);?>">
                                 <img src="<?php echo get_template_directory_uri().'/images/moi-nhat.png';?>" alt="">
                             </a>
                         </div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="chia3">
                         <div class="center">
-                            <a href="#">
+                            <a href="<?php bloginfo(url); echo "/download";?>">
                                 <img src="<?php echo get_template_directory_uri().'/images/hay-nhat.png';?>" alt="">
                             </a>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="chia3">
                         <div class="center">
-                            <a href="#">
+                            <a href="<?php bloginfo(url); echo "/download";?>">
                                 <img src="<?php echo get_template_directory_uri().'/images/tai-nhieu-nhat.png';?>" alt="">
                             </a>
                         </div>

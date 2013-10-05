@@ -48,6 +48,14 @@ register_sidebar(array(
 	'before_title' => '<div class="iz-title"><h2>',
 	'after_title' => '</h2></div>',
  ));
+register_sidebar(array(
+	'id'            => 'most-download-content',
+	'name'          => 'Most Download Single',
+	'before_widget' => '<div class="iz-box">',
+	'after_widget' => '</div>',
+	'before_title' => '<div class="iz-title"><h2>',
+	'after_title' => '</h2></div>',
+ ));
 
 //Phân trang vTwenty Twelve
 function iz_content_nav( $html_id ) {
