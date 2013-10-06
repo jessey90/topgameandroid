@@ -28,8 +28,8 @@ register_sidebar(array(
 	'name'          => 'Index Content',
 	'before_widget' => '<div class="iz-box">',
 	'after_widget' => '</div>',
-	'before_title' => '<div class="iz-title"><h2>',
-	'after_title' => '</h2></div>',
+	'before_title' => '',
+	'after_title' => '',
  ));
 
  register_sidebar(array(

@@ -29,46 +29,126 @@
       </script>
   </head>
   	<body>
-		<div class="iz-container">
-			<div class="iz-header">
-				<div class="iz-topmenu">
-					<div class="clear"></div>
-                    <div id="logo">
-                        <div class="logo-hd"><a href="http://topgameandroid.com/"> <img src="http://topgameandroid.com/wp-content/uploads/2013/10/Logo1.png" alt="GameMobiHay" style="height: 50px"></a></div>
-                    </div>
-				</div>
-                <div id="filter_game">
-                    <div class="chia3">
-                        <div class="center">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri().'/images/moi-nhat.png';?>" alt="">
-                            </a>
-                        </div>
-                        <div class="center">
-                            <span>Mới nhất</span>
-                        </div>
-                    </div>
-                    <div class="chia3">
-                        <div class="center">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri().'/images/hay-nhat.png';?>" alt="">
-                            </a>
-                        </div>
-                        <div class="center">
-                            <span>Hay nhất</span>
-                        </div>
-                    </div>
-                    <div class="chia3">
-                        <div class="center">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri().'/images/tai-nhieu-nhat.png';?>" alt="">
-                            </a>
-                        </div>
-                        <div class="center">
-                            <span>Tải nhiều</span>
-                        </div>
+		<div id="wapper">
+                <div id="topheader">
+                    <a href="#" id="logo">
+                        <img src="wp-content/themes/Splay/images/logo_bk.png" alt=""></a>
+                    <div id="right_top" align="right">
+                        <ul id="small_menu">
+                            <!-- <li class="li_2">
+<a class="t_search li_2" href="http://home.newsqplay.vn:88">
+<img class="top_menu" src="/images/layoutv2/news.png" onmouseover="this.src='/images/layoutv2/news2.png'" onmouseout="this.src='/images/layoutv2/news.png'">
+</a>
+</li> -->
+                            <li class="li_2">
+                                <a class="t_search li_2" onclick="load_bottom('t_search','/index/search-form','t_login','/index/login-form')">
+                                    <img class="top_menu" src="wp-content/themes/Splay/images/search.png" onmouseover="this.src='wp-content/themes/Splay/images/search2.png'" onmouseout="this.src='wp-content/themes/Splay/images/search.png'">
+                                </a>
+                            </li>
+                            <li class="li_2" id="t_menu">
+                                <a class="t_catalog li_2" onclick="menu_hover()">
+                                    <img class="top_menu" src="wp-content/themes/Splay/images/catalog.png" onmouseover="this.src='wp-content/themes/Splay/images/catalog2.png'" onmouseout="this.src='wp-content/themes/Splay/images/catalog.png'">
+                                </a>
+                                <ul id="menu_hover" style="z-index: 999; display: none;">
+                                    <!-- <li class="li_1" onclick="category()">
+                                            <img class="icon_topmenu" src="/images/layoutv2/category.png">
+                                            <a>Phân loại</a>
+                                            <img class="hover_menu" src="/images/layoutv2/mui_ten.png"/>
+                                     </li>-->
+                                    <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/game.html'">
+                                        <img class="icon_topmenu" src="/images/site/game281112-122710.png">
+                                        <a>Game</a>
+                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                    </li>
+                                    <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/ung-dung.html'">
+                                        <img class="icon_topmenu" src="/images/site/ungdung281112-122723.png">
+                                        <a>Ứng dụng</a>
+                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                    </li>
+                                    <li class=" li_1 " onclick="window.location='/index/send-email'">
+                                        <img class="icon_topmenu" src="/images/site/phanhoi281112-122732.png">
+                                        <a>Phản hồi</a>
+                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                    </li>
+
+                                    <li class="li_1" onclick="requires_login2('/0-0-0--1/thegame.html')">
+                                        <img class="icon_topmenu" src="/images/layoutv2/card.png">
+                                        <a>Nhận thẻ game</a>
+                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                    </li>
+                                    <li class="li_1" onclick="window.location='/1/0-0-0--1/3s/free.html'">
+                                        <img class="icon_topmenu" src="/images/layoutv2/game-free.png">
+                                        <a href="/1/0-0-0--1/3s/free.html">Game miễn phí</a>
+                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                    </li>
+
+
+                                </ul>
+                            </li></ul>
                     </div>
                 </div>
+                <div id="menu">
+                    <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr>
+                            <td>
+                                <a id="menu_top1" href="#" class=" menu_top selected">
+                                    Mới nhất
+                                </a>
+                            </td>
+                            <td>
+                                <a id="menu_top2" href="#" class=" menu_top  menu_top_center">
+                                    Hot nhất
+                                </a>
+                            </td>
+                            <td>
+                                <a id="menu_top3" href="#" class=" menu_top  menu_top_last">
+                                    Tốt nhất
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody></table>
+                </div>
+                    <!--Slider-->
+                <div class="poster theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <?php vslider('slider'); ?>
+                    </div>
+                </div>
+                <!-- View cat -->
+                <center id="category">
+                    <div class="category">						<a class="a_category " href="/1/0-0-0--1/2s/0/moi-nhat/tat-ca.html							"><span class="category_name">Tất cả</span>
+                    </a>
+                        <a class="a_category " href="#"><span class="category_name">Nhập vai</span>
+                        </a>
+                        <a class="a_category " href="#"><span class="category_name">Phiêu lưu</span>
+                        </a>
+                        <a class="a_category " href="#"><span class="category_name">Thể thao</span>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a class="a_category " href="#"><span class="category_name">Trí tuệ</span>
+                </a>
+                    <a class="a_category " href="#"><span class="category_name">Bắn súng</span>
+                        <span class="notification "><span class="in_no">1 </span></span>
+                    </a>
+                    <a class="a_category " href="#"><span class="category_name">Giải trí</span>
+                        <span class="notification "><span class="in_no">6 </span></span>
+                    </a>
+                    <a class="a_category " href="#"><span class="category_name">Chiến thuật</span>
+                    </a>
+                </div>
+                    <div class="category">
+                        <a class="a_category " href="#"><span class="category_name">Đua xe</span>
+                </a>
+                    <a class="a_category " href="#"><span class="category_name">Âm nhạc</span>
+                    </a>
+                    <a class="a_category " href="#"><span class="category_name">Mô phỏng</span>
+                        <span class="notification "><span class="in_no">1 </span></span>
+                    </a>
+                    <a class="a_category " href="#"><span class="category_name">Online</span>
+                    </a>
+                </div>
+                </center>
 				<!--<div class="iz-category">
 						<form action="<?php /*bloginfo('url'); */?>/" method="get">
 							<div >
@@ -102,7 +182,6 @@
 							</div>
 						</form>
 				</div>-->
-			</div>
 	<div class="iz-body">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header-content') ) : ?>
 		<?php endif; ?>

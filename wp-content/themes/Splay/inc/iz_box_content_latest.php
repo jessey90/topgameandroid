@@ -28,8 +28,7 @@ class Iz_Box_Content_Latest extends WP_Widget
             $i++;
 		?>
         <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent['ID'])); ?>
-        <div class="head"></div>
-		<div class="iz-label" <?php if($i%2!=1){echo "style='background: #f8ffed'";}?>>
+		<div class="iz-label" <?php if($i%2!=1){echo "style='background: #f2f4f6'";}?>>
             <div id="contentwrapper">
                 <div id="contentcolumn">
                     <div class="iz-label-title">
@@ -50,7 +49,7 @@ class Iz_Box_Content_Latest extends WP_Widget
                     <?php endif; ?>
                 </a>
                 <div class="iz-download">
-                    <a class="btn-download" href="<?php the_field('link_download_game',$recent['ID']); ?>">TẢI MIỄN PHÍ</a>
+                    <a class="btn-download" href="<?php the_field('link_download_game',$recent['ID']); ?>">Tải xuống</a>
                 </div>
             </div>
         </div>
