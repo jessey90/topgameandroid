@@ -1,23 +1,24 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-	<title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name').'| Tải game hot cho điện thoại'; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
-	<meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="google-site-verification" content="wAp6Hoh6eAHiBIlFKCtbHxpy2mZGfUsQDH9hx3RJxuA" />
-	<!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-114-precomposed.png"/>
+      <title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name').'| Tải game hot cho điện thoại'; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
+      <meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+      <meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="google-site-verification" content="wAp6Hoh6eAHiBIlFKCtbHxpy2mZGfUsQDH9hx3RJxuA" />
+      <!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-144-precomposed.png"/>
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-114-precomposed.png"/>
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-72-precomposed.png"/>
-                    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-57-precomposed.png"/>
-                                   <link rel="shortcut icon" href="/favicon.ico"/>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/layout.css" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" />
-	<?php wp_head();?>
-<meta name="google-site-verification" content="utwzUrss8wTSs9Sizy22dhsZl9oJFLskChu9nsk26bg" />
+      <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-57-precomposed.png"/>
+      <link rel="shortcut icon" href="/favicon.ico"/>
+      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css" type="text/css" />
+      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/layout.css" type="text/css" />
+      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" />
+      <?php wp_head();?>
+      <meta name="google-site-verification" content="utwzUrss8wTSs9Sizy22dhsZl9oJFLskChu9nsk26bg" />
       <script src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+      <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,22 +33,22 @@
 		<div id="wapper">
                 <div id="topheader">
                     <a href="#" id="logo">
-                        <img src="wp-content/themes/Splay/images/logo_bk.png" alt=""></a>
+                        <img src="<?php echo get_template_directory_uri() . '/images/logo_bk.png';?>" alt=""></a>
                     <div id="right_top" align="right">
                         <ul id="small_menu">
                             <!-- <li class="li_2">
 <a class="t_search li_2" href="http://home.newsqplay.vn:88">
-<img class="top_menu" src="/images/layoutv2/news.png" onmouseover="this.src='/images/layoutv2/news2.png'" onmouseout="this.src='/images/layoutv2/news.png'">
+<img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/news.png';?>" onmouseover="this.src='/images/layoutv2/news2.png'" onmouseout="this.src='/images/layoutv2/news.png'">
 </a>
 </li> -->
                             <li class="li_2">
                                 <a class="t_search li_2" onclick="load_bottom('t_search','/index/search-form','t_login','/index/login-form')">
-                                    <img class="top_menu" src="wp-content/themes/Splay/images/search.png" onmouseover="this.src='wp-content/themes/Splay/images/search2.png'" onmouseout="this.src='wp-content/themes/Splay/images/search.png'">
+                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/search.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/search2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/search.png';?>'">
                                 </a>
                             </li>
                             <li class="li_2" id="t_menu">
                                 <a class="t_catalog li_2" onclick="menu_hover()">
-                                    <img class="top_menu" src="wp-content/themes/Splay/images/catalog.png" onmouseover="this.src='wp-content/themes/Splay/images/catalog2.png'" onmouseout="this.src='wp-content/themes/Splay/images/catalog.png'">
+                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/catalog.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/catalog2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/catalog.png';?>'">
                                 </a>
                                 <ul id="menu_hover" style="z-index: 999; display: none;">
                                     <!-- <li class="li_1" onclick="category()">
@@ -58,28 +59,29 @@
                                     <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/game.html'">
                                         <img class="icon_topmenu" src="/images/site/game281112-122710.png">
                                         <a>Game</a>
-                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+
                                     </li>
                                     <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/ung-dung.html'">
                                         <img class="icon_topmenu" src="/images/site/ungdung281112-122723.png">
                                         <a>Ứng dụng</a>
-                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
                                     </li>
                                     <li class=" li_1 " onclick="window.location='/index/send-email'">
                                         <img class="icon_topmenu" src="/images/site/phanhoi281112-122732.png">
                                         <a>Phản hồi</a>
-                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
                                     </li>
 
                                     <li class="li_1" onclick="requires_login2('/0-0-0--1/thegame.html')">
                                         <img class="icon_topmenu" src="/images/layoutv2/card.png">
                                         <a>Nhận thẻ game</a>
-                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
                                     </li>
                                     <li class="li_1" onclick="window.location='/1/0-0-0--1/3s/free.html'">
                                         <img class="icon_topmenu" src="/images/layoutv2/game-free.png">
                                         <a href="/1/0-0-0--1/3s/free.html">Game miễn phí</a>
-                                        <img class="hover_menu" src="/images/layoutv2/mui_ten.png">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
                                     </li>
 
 
@@ -87,101 +89,101 @@
                             </li></ul>
                     </div>
                 </div>
-                <div id="menu">
-                    <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
-                        <tbody><tr>
-                            <td>
-                                <a id="menu_top1" href="#" class=" menu_top selected">
-                                    Mới nhất
-                                </a>
-                            </td>
-                            <td>
-                                <a id="menu_top2" href="#" class=" menu_top  menu_top_center">
-                                    Hot nhất
-                                </a>
-                            </td>
-                            <td>
-                                <a id="menu_top3" href="#" class=" menu_top  menu_top_last">
-                                    Tốt nhất
-                                </a>
-                            </td>
-                        </tr>
-                        </tbody></table>
-                </div>
-                    <!--Slider-->
-                <div class="poster theme-default">
-                    <div id="slider" class="nivoSlider">
-                        <?php vslider('slider'); ?>
-                    </div>
-                </div>
-                <!-- View cat -->
-                <center id="category">
-                    <div class="category">						<a class="a_category " href="/1/0-0-0--1/2s/0/moi-nhat/tat-ca.html							"><span class="category_name">Tất cả</span>
+    <div id="menu">
+        <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <a id="menu_top1" href="<?php get_bloginfo('url')?>" class=" menu_top selected">
+                        Home
                     </a>
-                        <a class="a_category " href="#"><span class="category_name">Nhập vai</span>
-                        </a>
-                        <a class="a_category " href="#"><span class="category_name">Phiêu lưu</span>
-                        </a>
-                        <a class="a_category " href="#"><span class="category_name">Thể thao</span>
-                        </a>
-                    </div>
-                    <div class="category">
-                        <a class="a_category " href="#"><span class="category_name">Trí tuệ</span>
-                </a>
-                    <a class="a_category " href="#"><span class="category_name">Bắn súng</span>
-                        <span class="notification "><span class="in_no">1 </span></span>
+                </td>
+                <td>
+                    <a id="menu_top2" href="<?php get_bloginfo('url')?>/game-android/" class=" menu_top  menu_top_center">
+                        Game
                     </a>
-                    <a class="a_category " href="#"><span class="category_name">Giải trí</span>
-                        <span class="notification "><span class="in_no">6 </span></span>
+                </td>
+                <td>
+                    <a id="menu_top3" href="<?php get_bloginfo('url')?>/ung-dung-android/" class=" menu_top  menu_top_last">
+                        App
                     </a>
-                    <a class="a_category " href="#"><span class="category_name">Chiến thuật</span>
-                    </a>
-                </div>
-                    <div class="category">
-                        <a class="a_category " href="#"><span class="category_name">Đua xe</span>
-                </a>
-                    <a class="a_category " href="#"><span class="category_name">Âm nhạc</span>
-                    </a>
-                    <a class="a_category " href="#"><span class="category_name">Mô phỏng</span>
-                        <span class="notification "><span class="in_no">1 </span></span>
-                    </a>
-                    <a class="a_category " href="#"><span class="category_name">Online</span>
-                    </a>
-                </div>
-                </center>
-				<!--<div class="iz-category">
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+    <!--Slider-->
+    <div class="poster theme-default">
+        <div id="slider" class="nivoSlider">
+            <?php vslider('slider'); ?>
+        </div>
+    </div>
+    <!-- View cat -->
+    <center id="category">
+        <div class="category">						<a class="a_category " href="#"><span class="category_name">Tất cả</span>
+        </a>
+            <a class="a_category " href="#"><span class="category_name">Nhập vai</span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Phiêu lưu</span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Thể thao</span>
+            </a>
+        </div>
+        <div class="category">
+            <a class="a_category " href="#"><span class="category_name">Trí tuệ</span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Bắn súng</span>
+                <span class="notification "><span class="in_no">1 </span></span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Giải trí</span>
+                <span class="notification "><span class="in_no">6 </span></span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Chiến thuật</span>
+            </a>
+        </div>
+        <div class="category">
+            <a class="a_category " href="#"><span class="category_name">Đua xe</span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Âm nhạc</span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Mô phỏng</span>
+                <span class="notification "><span class="in_no">1 </span></span>
+            </a>
+            <a class="a_category " href="#"><span class="category_name">Online</span>
+            </a>
+        </div>
+    </center>
+    <!--<div class="iz-category">
 						<form action="<?php /*bloginfo('url'); */?>/" method="get">
 							<div >
 							<?php
-/*								$args = array(
-									'show_option_all'    => '',
-									'show_option_none'   => 'Chọn chuyên mục',
-									'orderby'            => 'ID', 
-									'order'              => 'ASC',
-									'show_count'         => 1,
-									'hide_empty'         => 1, 
-									'child_of'           => 0,
-									'exclude'            => '',
-									'echo'               => 0,
-									'selected'           => 0,
-									'hierarchical'       => 1, 
-									'name'               => 'cat',
-									'id'                 => '',
-									'class'              => 'postform',
-									'depth'              => 0,
-									'tab_index'          => 0,
-									'taxonomy'           => 'category',
-									'hide_if_empty'      => false
-								);
-							$select = wp_dropdown_categories($args);
-							$select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
-							$select = str_replace('id','class',$select);
-							echo $select;
-							*/?>
+    /*								$args = array(
+                                        'show_option_all'    => '',
+                                        'show_option_none'   => 'Chọn chuyên mục',
+                                        'orderby'            => 'ID',
+                                        'order'              => 'ASC',
+                                        'show_count'         => 1,
+                                        'hide_empty'         => 1,
+                                        'child_of'           => 0,
+                                        'exclude'            => '',
+                                        'echo'               => 0,
+                                        'selected'           => 0,
+                                        'hierarchical'       => 1,
+                                        'name'               => 'cat',
+                                        'id'                 => '',
+                                        'class'              => 'postform',
+                                        'depth'              => 0,
+                                        'tab_index'          => 0,
+                                        'taxonomy'           => 'category',
+                                        'hide_if_empty'      => false
+                                    );
+                                $select = wp_dropdown_categories($args);
+                                $select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
+                                $select = str_replace('id','class',$select);
+                                echo $select;
+                                */?>
 							<noscript><input type="submit" value="Xem" /></noscript>
 							</div>
 						</form>
 				</div>-->
 	<div class="iz-body">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header-content') ) : ?>
-		<?php endif; ?>
+<?php endif; ?>

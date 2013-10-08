@@ -457,7 +457,7 @@ a:hover {
 
 #filter_game{
     width: 100%;
-    height: 65px;
+    height: 100px;
     margin: 10px 0;
 }
 
@@ -482,7 +482,7 @@ a:hover {
 }
 
 .chia5{
-    width: 20%;
+    width: 19%;
     float: left;
     height: 100px;
 }
@@ -656,4 +656,52 @@ a.li_2 img {
     height: auto;
     overflow: hidden;
     margin-top: 1px;
+}
+
+ul#menu_hover {
+    border: 1px solid #C5C5C5;
+    border-bottom: none;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    -webkit-border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0px;
+    width: 100%;
+    max-width: 240px;
+}
+
+li.li_1 {
+    display: block;
+    border-bottom: 1px solid #dfdfdf;
+    width: auto;
+    height: 39px;
+    background-color: white !important;
+    position: relative;
+}
+
+.icon_topmenu {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+li.li_1 a {
+    position: absolute;
+    top: 12px;
+    left: 67px;
+    font-weight: bold;
+}
+
+li.li_1 img.hover_menu {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+}
+
+li.li_1:hover {
+    background-color: #c1c1c1 !important;
+    cursor: pointer;
 }
