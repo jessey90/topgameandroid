@@ -9,6 +9,12 @@ class Iz_Box_Content_Random extends WP_Widget
  
   //Displays the Widget in the front-end 
     function widget($args, $instance){
+        global $before_widget;
+        global $after_widget;
+        global $before_title;
+        global $after_title;
+        global $blog_category;
+
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
@@ -20,6 +26,7 @@ class Iz_Box_Content_Random extends WP_Widget
 			$file_img=get_template_directory_uri().'/images/default.png';
 		if ( $title )
 			echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;
+        global $post;
 		$args1 = array(
 						'posts_per_page' => $posts_number,
 						'paged' => 1,
@@ -31,17 +38,38 @@ class Iz_Box_Content_Random extends WP_Widget
 			else
 				$file_img_list=get_template_directory_uri().'/images/default-list.png';
 			echo '<div class="iz-content">';
+            $i = 0;
 			while ($my_query->have_posts()): 
 				$my_query->the_post();
 				$do_not_duplicate = $post->ID;
+                $i++;
+                $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 				?>
-				<div class="iz-label">
-					<h3 class="iz-label-title-h2">
-						<img src="<?php echo $file_img_list;?>" alt="<?php echo strip_shortcodes(the_title()); ?>"/>
-						<a title="<?php echo strip_shortcodes(the_title()); ?>" href="<?php the_permalink() ?>"><?php echo strip_shortcodes(the_title()); ?></a>
-					</h3>
-				<div class="clear"></div>
-				</div>
+            <div class="iz-label" <?php if($i%2!=1){echo "style='background: #f2f4f6'";}?>>
+                <div class="contentwrapper">
+                    <div class="contentcolumn">
+                        <div class="iz-label-title">
+                            <a title="<?php echo esc_attr($post->post_title);?>" href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a>
+                        </div>
+                        <div class="iz-desc">
+                            <?php
+                            the_field( 'mo_ta', $post->ID);?>
+                        </div>
+                    </div>
+                </div>
+                <div class="iz-logo leftcolumn">
+                    <a class="iz-label-img"href="<?php echo get_permalink($post->ID); ?>" title ="<?php echo strip_shortcodes($post->post_title); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes($post->post_title); ?> " />
+                        <?php else : ?>
+                        <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes($post->post_title); ?> "/>
+                        <?php endif; ?>
+                    </a>
+                    <div class="iz-download">
+                        <a class="btn-download" href="<?php the_field('link_download_game',$post->ID); ?>">Tải xuống</a>
+                    </div>
+                </div>
+            </div>
 				<?php
 			endwhile;
 		?>

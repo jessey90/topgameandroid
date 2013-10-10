@@ -5,7 +5,7 @@
     <?php /* If this is a category archive */
     if (is_category()) {
         ?>
-    <div class="head iz-title" style="height: 15px;" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <div class="iz-title" style="height: 1px;" xmlns:v="http://rdf.data-vocabulary.org/#">
                     <span typeof="v:Breadcrumb">
                         <a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false)));?>"
                            property="v:title" rel="v:url">
@@ -99,12 +99,11 @@
         $do_not_duplicate = $post->ID;
         ?>
         <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($the_post->ID)); ?>
-            <div class="head""></div>
             <div class="iz-label" <?php if ($i % 2 != 1) {
-                echo "style='background: #f8ffed'";
+                echo "style='background: #f2f4f6'";
             }?>>
-                <div id="contentwrapper">
-                    <div id="contentcolumn">
+                <div class="contentwrapper">
+                    <div class="contentcolumn">
                         <div class="iz-label-title">
                             <a title="<?php echo esc_attr(the_title());?>"
                                href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
@@ -116,7 +115,7 @@
                     </div>
                 </div>
 
-                <div class="iz-logo" id="leftcolumn">
+                <div class="iz-logo leftcolumn">
                     <a class="iz-label-img" href="<?php the_permalink() ?>"
                        title="<?php echo strip_shortcodes($post->post_title); ?>">
                         <?php if (has_post_thumbnail()) : ?>

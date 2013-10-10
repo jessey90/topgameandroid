@@ -7,7 +7,10 @@
 			</h1>
 		</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="head" style="padding: 5px"></div>
+        <div class="head"></div>
+        <div class="poster">
+            <img src="<?php the_field('img_banner_chitiet'); ?>" alt="" style="width: 480px;height: 235px;">
+        </div>
 		<div class="iz-content-meta">
             <div class="div1">
                 <a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes(the_title()); ?>">
@@ -17,16 +20,35 @@
                     <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes(the_title()); ?> "/>
                     <?php endif; ?>
                 </a>
+                <a class="btn-download download_11" href="<?php the_field('link_download_game'); ?>">Tải xuống</a>
             </div>
             <h2 itemprop="name" class="iz-post-title">
                 <?php the_title(); ?>
             </h2>
-            <div class="div2">
+            <div class="div2" id="cat_single">
                 <span>
 				    <span class="iz-download-views"><?php if(function_exists('the_views')) { the_views(); } ?></span>
                 </span>
+                <p>
+                   <span>
+                       Nhà Phát Hành: <?php the_field('nha_phat_hanh'); ?>
+                </span>
+                </p>
+                <p>
+                    <span>
+                    Dung Lượng: <?php the_field('dung_luong'); ?>
+                </span>
+                </p>
+                <p>
+                    <span>
+                        Thể Loại: <?php echo the_category($post->ID); ?>
+                    </span>
+                </p>
+                <span>
+                    <?php get_ssb(); ?>
+                </span>
+
                 <!--            <span style="float: left">Đăng ngày: <?php /*the_time('d/m/Y'); */?> bởi <b><?php /*the_author(); */?></b></span>-->
-                <a class="btn-download" href="<?php the_field('link_download_game'); ?>">Tải xuống</a>
             </div>
         </div>
 		<div class="iz-content" itemtype="http://schema.org/BlogPosting" itemscope="itemscope">

@@ -3,7 +3,7 @@
   <head>
       <title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name').'| Tải game hot cho điện thoại'; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
       <meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-      <meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords">
+      <meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="google-site-verification" content="wAp6Hoh6eAHiBIlFKCtbHxpy2mZGfUsQDH9hx3RJxuA" />
       <!-- Fav and touch icons -->
@@ -17,9 +17,9 @@
       <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" />
       <?php wp_head();?>
       <meta name="google-site-verification" content="utwzUrss8wTSs9Sizy22dhsZl9oJFLskChu9nsk26bg" />
-      <script src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
-      <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
-      <script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
+      <script type="text/javascript">
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -32,9 +32,9 @@
   	<body>
 		<div id="wapper">
                 <div id="topheader">
-                    <a href="#" id="logo">
-                        <img src="<?php echo get_template_directory_uri() . '/images/logo_bk.png';?>" alt=""></a>
-                    <div id="right_top" align="right">
+                    <a href="<?php bloginfo(url);?>" id="logo">
+                        <img src="<?php echo get_template_directory_uri() . '/images/logo_bk.png';?>" alt="" /></a>
+                    <div id="right_top" style="text-align: right">
                         <ul id="small_menu">
                             <!-- <li class="li_2">
 <a class="t_search li_2" href="http://home.newsqplay.vn:88">
@@ -43,12 +43,12 @@
 </li> -->
                             <li class="li_2">
                                 <a class="t_search li_2" onclick="load_bottom('t_search','/index/search-form','t_login','/index/login-form')">
-                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/search.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/search2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/search.png';?>'">
+                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/search.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/search2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/search.png';?>'" alt=""/>
                                 </a>
                             </li>
                             <li class="li_2" id="t_menu">
                                 <a class="t_catalog li_2" onclick="menu_hover()">
-                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/catalog.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/catalog2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/catalog.png';?>'">
+                                    <img class="top_menu" src="<?php echo get_template_directory_uri() . '/images/catalog.png';?>" onmouseover="this.src='<?php echo get_template_directory_uri() . '/images/catalog2.png';?>'" onmouseout="this.src='<?php echo get_template_directory_uri() . '/images/catalog.png';?>'" alt=""/>
                                 </a>
                                 <ul id="menu_hover" style="z-index: 999; display: none;">
                                     <!-- <li class="li_1" onclick="category()">
@@ -57,31 +57,31 @@
                                             <img class="hover_menu" src="/images/layoutv2/mui_ten.png"/>
                                      </li>-->
                                     <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/game.html'">
-                                        <img class="icon_topmenu" src="/images/site/game281112-122710.png">
+                                        <img class="icon_topmenu" src="/images/site/game281112-122710.png" alt="" />
                                         <a>Game</a>
-                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>" alt="" />
 
                                     </li>
                                     <li class=" li_1 " onclick="window.location='/1/0-0-0--1/3s/ung-dung.html'">
-                                        <img class="icon_topmenu" src="/images/site/ungdung281112-122723.png">
+                                        <img class="icon_topmenu" src="/images/site/ungdung281112-122723.png" alt="" />
                                         <a>Ứng dụng</a>
-                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>" alt="" />
                                     </li>
                                     <li class=" li_1 " onclick="window.location='/index/send-email'">
-                                        <img class="icon_topmenu" src="/images/site/phanhoi281112-122732.png">
+                                        <img class="icon_topmenu" src="/images/site/phanhoi281112-122732.png"alt="" />
                                         <a>Phản hồi</a>
-                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>"alt="" />
                                     </li>
 
                                     <li class="li_1" onclick="requires_login2('/0-0-0--1/thegame.html')">
-                                        <img class="icon_topmenu" src="/images/layoutv2/card.png">
+                                        <img class="icon_topmenu" src="/images/layoutv2/card.png" alt="" />
                                         <a>Nhận thẻ game</a>
-                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>"alt="" />
                                     </li>
                                     <li class="li_1" onclick="window.location='/1/0-0-0--1/3s/free.html'">
-                                        <img class="icon_topmenu" src="/images/layoutv2/game-free.png">
+                                        <img class="icon_topmenu" src="/images/layoutv2/game-free.png" alt=""/>
                                         <a href="/1/0-0-0--1/3s/free.html">Game miễn phí</a>
-                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>">
+                                        <img class="hover_menu" src="<?php echo get_template_directory_uri() . '/images/mui_ten.png';?>" alt=""/>
                                     </li>
 
 
@@ -93,7 +93,7 @@
         <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
             <tbody><tr>
                 <td>
-                    <a id="menu_top1" href="<?php get_bloginfo('url')?>" class=" menu_top selected">
+                    <a id="menu_top1" href="<?php bloginfo(url);?>" class=" menu_top selected">
                         Home
                     </a>
                 </td>
@@ -110,47 +110,6 @@
             </tr>
             </tbody></table>
     </div>
-    <!--Slider-->
-    <div class="poster theme-default">
-        <div id="slider" class="nivoSlider">
-            <?php vslider('slider'); ?>
-        </div>
-    </div>
-    <!-- View cat -->
-    <center id="category">
-        <div class="category">						<a class="a_category " href="#"><span class="category_name">Tất cả</span>
-        </a>
-            <a class="a_category " href="#"><span class="category_name">Nhập vai</span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Phiêu lưu</span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Thể thao</span>
-            </a>
-        </div>
-        <div class="category">
-            <a class="a_category " href="#"><span class="category_name">Trí tuệ</span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Bắn súng</span>
-                <span class="notification "><span class="in_no">1 </span></span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Giải trí</span>
-                <span class="notification "><span class="in_no">6 </span></span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Chiến thuật</span>
-            </a>
-        </div>
-        <div class="category">
-            <a class="a_category " href="#"><span class="category_name">Đua xe</span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Âm nhạc</span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Mô phỏng</span>
-                <span class="notification "><span class="in_no">1 </span></span>
-            </a>
-            <a class="a_category " href="#"><span class="category_name">Online</span>
-            </a>
-        </div>
-    </center>
     <!--<div class="iz-category">
 						<form action="<?php /*bloginfo('url'); */?>/" method="get">
 							<div >

@@ -124,11 +124,12 @@ a:hover {
 	right:0;
 }
 .iz-title {
-    height: 1px;
+    height: 16px;
     color: #ddd;
 }
 .iz-title h2,.iz-title h1,.iz-title h1 a{
-	color: #FFFFFF;
+	background: #8AC300;
+    color: #fff;
     font-size: 12px;
     font-weight: bolder;
 }
@@ -210,32 +211,33 @@ a:hover {
 .iz-download-a{
 	padding-left: 4px;
 }
-.iz-box .iz-content-meta{
-	display:block;
-	border-bottom: 1px solid #888888;
-	padding:5px;
-	background:#f8ffed;
-	color: #000000;
-    height: 111px;
+
+.iz-box .iz-content-meta {
+    display: block;
+    padding: 5px;
+    background: #fff;
+    color: #000000;
+    height: 166px;
     position: relative;
+    border: 1px solid #DEDEDE;
 }
 
-.iz-content-meta img{
+.iz-content-meta img {
     float: left;
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     border-radius: 10px;
-    margin-right: 7px;
+    margin: 30px;
     -moz-box-shadow: 0 0 5px #888;
     -webkit-box-shadow: 0 0 5px#888;
     box-shadow: 0 0 5px #888;
     bottom: 5px;
 }
 
-.iz-content-meta .btn-download{
+.iz-content-meta .btn-download {
     position: absolute;
-    bottom: 23px;
-    right: 20px;
+    bottom: 7px;
+    left: 29px;
 }
 
 .iz-content-meta a{
@@ -249,19 +251,20 @@ a:hover {
 
 .iz-box .iz-content-body{
     padding: 2px 5px 13px 6px;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
 }
-.iz-post-title{
+.iz-post-title {
     font-size: 15px;
     margin-bottom: 3px;
     font-weight: bold;
-    margin-top: 11px;
-    color: #9a9a9a;
+    color: #4A4A4A;
+    margin-top: 15px;
 }
-.iz-content-meta .div1{
-    width: 93px;
+.iz-content-meta .div1 {
+    width: 133px;
     height: 100%;
     float: left;
-    padding-top: 14px;
 }
 .iz-content-meta .div2{
     float: left;
@@ -360,7 +363,7 @@ a:hover {
 }
 
 .btn-download{
-    background-color: #A5A5A5;
+    background-color: #8AC300;
     border: 1px solid white;
     display: block;
     width: 72px;
@@ -377,7 +380,7 @@ a:hover {
 }
 
 .btn-download:hover{
-    background-color: #8AC300;
+    background-color: #d24d33;
 }
 
 .btn-download a{
@@ -417,7 +420,7 @@ a:hover {
 }
 
 .head{
-    height: 4px;
+    height: 1px;
     background-image: linear-gradient(bottom, rgb(197,218,59) 34%, rgb(236,242,168) 67%);
     background-image: -o-linear-gradient(bottom, rgb(197,218,59) 34%, rgb(236,242,168) 67%);
     background-image: -moz-linear-gradient(bottom, rgb(197,218,59) 34%, rgb(236,242,168) 67%);
@@ -433,25 +436,25 @@ a:hover {
     );
 }
 
-#leftcolumn{
+.leftcolumn{
     float: left;
     width: 81px; /*Width of left column*/
     padding-left: 15px;
     margin-left: -100%;
 }
 
-#rightcolumn{
+.rightcolumn{
     float: left;
     width: 105px;
     margin-left: -105px;
 }
 
-#contentwrapper {
+.contentwrapper {
     float: left;
     width: 100%;
 }
 
-#contentcolumn {
+.contentcolumn {
     margin: 0 0 0 110px;
 }
 
@@ -524,8 +527,7 @@ a:hover {
 #logo img {
     padding-left: 1px;
     margin-top: -5px;
-    width: 80%;
-    max-width: 130px;
+    height: 45px;
 }
 
 #right_top {
@@ -652,8 +654,8 @@ a.li_2 img {
 
 .nivoSlider {
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 480px;
+    height: 235px;
     overflow: hidden;
     margin-top: 1px;
 }
@@ -704,4 +706,67 @@ li.li_1 img.hover_menu {
 li.li_1:hover {
     background-color: #c1c1c1 !important;
     cursor: pointer;
+}
+
+#bottom {
+    height: 64px;
+    background: url('images/bottom-bar2.png') repeat-x;
+    position: relative;
+}
+
+.b_right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 48%;
+    max-width: 200px;
+    text-align: right;
+    margin: 12px;
+    margin-top: 15px;
+}
+
+#bottom a {
+    display: inline-block;
+}
+
+.b_mail {
+    width: 27.5%;
+    max-width: 44px;
+    height: auto;
+}
+
+.poster {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-bottom: 0px solid #D9DBDD;
+    margin-top: -1px;
+}
+
+#header_info {
+    padding-top: 10px;
+    border: 1px solid #DEDEDE;
+    border-top: none;
+}
+
+.download_11 {
+    float: none;
+    position: inherit;
+    padding: 5px;
+    height: 17px;
+    background-color: #8AC300;
+    margin-bottom: 15px;
+}
+
+a.download_11:HOVER {
+    background-color: #d24d33;
+}
+
+#cat_single a {
+    color: #83A913;
+    float: none;
+}
+
+#cat_single p{
+    margin: 4px 0;
 }
