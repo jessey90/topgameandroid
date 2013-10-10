@@ -10,6 +10,11 @@
   //Displays the Widget in the front-end
     function widget($args, $instance){
 		extract($args);
+        global $before_widget;
+        global $before_title;
+        global $after_title;
+        global $after_widget;
+
 		$title = empty($instance['title']) ? 'Bài viết mới nhất' : $instance['title'];
 		//$title = apply_filters('widget_title', empty($instance['title']) ? '1Bài viết mới nhất' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
