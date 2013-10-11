@@ -9,7 +9,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="head"></div>
         <div class="poster">
-            <img src="<?php the_field('img_banner_chitiet'); ?>" alt="" style="width: 480px;height: 235px;">
+            <img src="<?php the_field('img_banner_chitiet'); ?>" alt="" style="width: 100%;height: 235px;">
         </div>
 		<div class="iz-content-meta">
             <div class="div1">

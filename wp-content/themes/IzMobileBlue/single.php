@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 	<div class="iz-box">
-		<div class="iz-title">
+		<div class="iz-title" style="display: none">
 			<h1>
 				<?php seobreadcrumbs(); ?>
 			</h1>
 		</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="head" style="padding: 5px"></div>
 		<div class="iz-content-meta">
             <div class="div1">
                 <a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes(the_title()); ?>">

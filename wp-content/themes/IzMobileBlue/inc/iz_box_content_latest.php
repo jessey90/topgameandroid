@@ -47,8 +47,7 @@
                 ?>
 
         <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent['ID'])); ?>
-        <div class="head"></div>
-		<div class="iz-label" <?php if($i%2!=1){echo "style='background: #f8ffed'";}?>>
+		<div class="iz-label" <?php if($i%2!=1){echo "style='background: #f6f8f4'";}?>>
             <div id="contentwrapper">
                 <div id="contentcolumn">
                     <div class="iz-label-title">
@@ -68,7 +67,7 @@
                     <?php endif; ?>
                 </a>
                 <div class="iz-download">
-                    <a class="btn-download" href="<?php the_field('link_download_game');?>">TẢI MIỄN PHÍ</a>
+                    <a class="btn-download" href="<?php the_field('link_download_game');?>">Tải về</a>
                 </div>
             </div>
         </div>

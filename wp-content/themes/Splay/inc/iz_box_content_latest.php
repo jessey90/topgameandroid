@@ -48,7 +48,7 @@ class Iz_Box_Content_Latest extends WP_Widget
                 $do_not_duplicate = $post->ID;
                 ?>
 
-                <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent['ID'])); ?>
+                <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>
                 <div class="iz-label" <?php if($i%2!=1){echo "style='background: #f2f4f6'";}?>>
                     <div class="contentwrapper">
                         <div class="contentcolumn">
@@ -61,11 +61,11 @@ class Iz_Box_Content_Latest extends WP_Widget
                         </div>
                     </div>
                     <div class="iz-logo leftcolumn">
-                        <a class="iz-label-img"href="<?php the_permalink(); ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
+                        <a class="iz-label-img"href="<?php the_permalink(); ?>" title ="<?php echo strip_shortcodes($post->post_title); ?>">
                             <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> " />
+                            <img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes($post->post_title); ?> " />
                             <?php else : ?>
-                            <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> "/>
+                            <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes($post->post_title); ?> "/>
                             <?php endif; ?>
                         </a>
                         <div class="iz-download">
@@ -86,7 +86,7 @@ class Iz_Box_Content_Latest extends WP_Widget
         echo $after_widget;
     }
 
-    //Saves the settings.
+    //Saves t       he settings.
     function update($new_instance, $old_instance){
         $instance = $old_instance;
         $instance['title'] = stripslashes($new_instance['title']);

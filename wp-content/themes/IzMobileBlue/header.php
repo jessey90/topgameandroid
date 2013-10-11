@@ -40,31 +40,31 @@
                 <div id="filter_game">
                     <div class="chia3">
                         <div class="center">
-                            <a href="<?php bloginfo(url);?>">
-                                <img src="<?php echo get_template_directory_uri().'/images/moi-nhat.png';?>" alt="">
-                            </a>
+                                <a href="<?php bloginfo(url);?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/moi-nhat.png';?>" alt="">
+                                </a>
                         </div>
-                        <div class="center">
+                        <div class="imageff">
                             <span>Mới nhất</span>
                         </div>
                     </div>
                     <div class="chia3">
                         <div class="center">
-                            <a href="<?php bloginfo(url); echo "/download";?>">
-                                <img src="<?php echo get_template_directory_uri().'/images/hay-nhat.png';?>" alt="">
-                            </a>
+                                <a href="<?php bloginfo(url); echo "/download";?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/hay-nhat.png';?>" alt="">
+                                </a>
                         </div>
-                        <div class="center">
+                        <div class="imageff" style="background: #262626">
                             <span>Hay nhất</span>
                         </div>
                     </div>
                     <div class="chia3">
                         <div class="center">
-                            <a href="<?php bloginfo(url); echo "/download";?>">
-                                <img src="<?php echo get_template_directory_uri().'/images/tai-nhieu-nhat.png';?>" alt="">
-                            </a>
+                                <a href="<?php bloginfo(url); echo "/download";?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/tai-nhieu-nhat.png';?>" alt="">
+                                </a>
                         </div>
-                        <div class="center">
+                        <div class="imageff">
                             <span>Tải nhiều</span>
                         </div>
                     </div>

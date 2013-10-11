@@ -741,6 +741,12 @@ li.li_1:hover {
     height: auto;
     border-bottom: 0px solid #D9DBDD;
     margin-top: -1px;
+    position: relative;
+}
+
+.poster img{
+    width: 480px;
+    height: 235px;
 }
 
 #header_info {
