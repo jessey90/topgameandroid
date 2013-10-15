@@ -10,6 +10,17 @@ $('#supportLink').click(function (e) {
         window.location.href = $(this).attr('href');
     }
 });
+
+$('td a', '#filter').click(function (e) {
+    e.preventDefault();
+    var target = $(this).attr('data-target');
+    $('li a', '#filter').removeClass('selected');
+    $(this).addClass('selected');
+/*    $('.box').css('display', 'none');
+    $('#' + target).css('display', 'block');*/
+});
+
+
 $(window).ready(function(){
     $(".download_1").click(function(e){
         e.preventDefault();

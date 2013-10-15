@@ -16,8 +16,9 @@
       <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/layout.css" type="text/css" />
       <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" />
       <?php wp_head();?>
-      <meta name="google-site-verification" content="utwzUrss8wTSs9Sizy22dhsZl9oJFLskChu9nsk26bg" />
+      <meta name="google-site-verification" content="HTuthc8OPhxE_6inQ33yaw28e6H3qqOw3mVrIpce1vM" />
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.7.2.min.js"></script>
       <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
       <script type="text/javascript">
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -25,7 +26,7 @@
                   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-43875018-1', 'gamemobihay.com');
+          ga('create', 'UA-44745230-1', 'taiungdungandroid.com');
           ga('send', 'pageview');
       </script>
   </head>
@@ -33,7 +34,7 @@
 		<div id="wapper">
                 <div id="topheader">
                     <a href="<?php bloginfo(url);?>" id="logo">
-                        <img src="<?php echo get_template_directory_uri() . '/images/logo_bk.png';?>" alt="" /></a>
+                        <img src="http://taiungdungandroid.com/wp-content/uploads/2013/10/Android-logo.png" alt="" /></a>
                     <div id="right_top" style="text-align: right">
                         <ul id="small_menu">
                             <!-- <li class="li_2">
@@ -91,9 +92,10 @@
                 </div>
     <div id="menu">
         <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
-            <tbody><tr>
+            <tbody>
+            <tr id="filter">
                 <td>
-                    <a id="menu_top1" href="<?php bloginfo(url);?>" class=" menu_top selected">
+                    <a id="menu_top1" href="<?php bloginfo(url);?>" class=" menu_top">
                         Home
                     </a>
                 </td>

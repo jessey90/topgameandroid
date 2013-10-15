@@ -31,7 +31,7 @@
                 </span>
                 <p>
                    <span>
-                       Nhà Phát Hành: <?php the_field('nha_phat_hanh'); ?>
+                       NSX: <?php the_field('nha_phat_hanh'); ?>
                 </span>
                 </p>
                 <p>

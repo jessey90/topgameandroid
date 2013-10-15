@@ -25,7 +25,7 @@
 				    <span class="iz-download-views"><?php if(function_exists('the_views')) { the_views(); } ?></span>
                 </span>
                 <!--            <span style="float: left">Đăng ngày: <?php /*the_time('d/m/Y'); */?> bởi <b><?php /*the_author(); */?></b></span>-->
-                <a class="btn-download" href="<?php the_field('link_download_game'); ?>">TẢI MIỄN PHÍ</a>
+                <a class="btn-download" href="<?php the_field('link_download_game'); ?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chi-Tiet', 'Download', 'Game <?php echo the_title();?>']);">Tải về</a>
             </div>
         </div>
 		<div class="iz-content" itemtype="http://schema.org/BlogPosting" itemscope="itemscope">

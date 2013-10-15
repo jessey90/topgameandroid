@@ -45,8 +45,7 @@ class Iz_Box_Content_Game extends WP_Widget
 						$do_not_duplicate = $post->ID;
 				?>
 					<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($the_post->ID) ); ?>
-                        <div class="head"></div>
-                        <div class="iz-label" <?php if($i%2!=1){echo "style='background: #f8ffed'";}?>>
+                        <div class="iz-label" <?php if($i%2!=1){echo "style='background: #f6f8f4'";}?>>
                             <div id="contentwrapper">
                                 <div id="contentcolumn">
                                     <div class="iz-label-title">
@@ -65,9 +64,9 @@ class Iz_Box_Content_Game extends WP_Widget
                                     <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes(the_title()); ?> "/>
                                     <?php endif; ?>
                                 </a>
-                                <div class="iz-download">
-                                    <a class="btn-download" href="<?php the_field('link_download_game');?>">TẢI MIỄN PHÍ</a>
-                                </div>
+                            </div>
+                            <div class="iz-download" id="rightcolumn">
+                                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Tai-Nhieu', 'Download', 'Game <?php echo the_title();?>']);">Tải về</a>
                             </div>
                         </div>
 				<?php

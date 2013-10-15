@@ -66,9 +66,9 @@
                     <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes(the_title()); ?> "/>
                     <?php endif; ?>
                 </a>
-                <div class="iz-download">
-                    <a class="btn-download" href="<?php the_field('link_download_game');?>">Tải về</a>
-                </div>
+            </div>
+            <div class="iz-download" id="rightcolumn">
+                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download', 'Game <?php echo the_title();?>']);">Tải về</a>
             </div>
         </div>
                 <?php

@@ -105,7 +105,7 @@ div#respond form textarea#comment {
 
 .iz-box li {
     border-top: 1px solid #fff;
-    height: auto;
+    height: 60px;
     line-height: 23px;
 }
 

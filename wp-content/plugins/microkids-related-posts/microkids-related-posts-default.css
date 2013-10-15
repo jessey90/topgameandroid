@@ -1,4 +1,6 @@
 .related-posts img {
     margin: 0 0.5em 0.5em 0;
     float: left;
+    height: 50px;
+    width: 50px;
 }

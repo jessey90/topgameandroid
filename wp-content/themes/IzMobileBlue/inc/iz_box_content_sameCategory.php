@@ -19,7 +19,7 @@ class Iz_Box_Content_sameCategory extends WP_Widget
 		else
 			$file_img=get_template_directory_uri().'/images/default.png';
 		if ( $title )
-			echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;
+			//echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;
 			global $post;
 			$category = get_the_category($post->ID);
 			$category = $category[0]->cat_ID;
@@ -36,31 +36,45 @@ class Iz_Box_Content_sameCategory extends WP_Widget
 			else
 				$file_img_list=get_template_directory_uri().'/images/default-list.png';
 			echo '<div class="iz-content">';
+			echo '<div class="ta-title">Các sản phẩm liên quan</div>';
+
+            $i = 0;
 			while ($my_query->have_posts()): 
 				$my_query->the_post();
+                $i++;
 				$do_not_duplicate = $post->ID;
                 $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 				?>
-				<div class="iz-label">
-					<h3 class="iz-label-title-h2">
-                        <a class="iz-label-img"href="<?php the_permalink() ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php echo $feat_image; ?>" style="width: 40px;height: 40px" alt="<?php  echo strip_shortcodes($recent['post_title']); ?>" />
-                            <?php else : ?>
-                            <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> "/>
-                            <?php endif; ?>
-                        </a>
-						<a title="<?php echo strip_shortcodes(the_title()); ?>" style="font-size:12px;margin-left: 6px;" href="<?php the_permalink() ?>"><?php echo strip_shortcodes(the_title()); ?></a>
-					</h3>
-				<div class="clear"></div>
-                    <div class="iz-download">
-                        <div id="game_lien_quan">
-                            <a class="btn-download" href="<?php the_field('link_download_game',$recent['ID']); ?>">TẢI MIỄN PHÍ</a>
+            <div class="iz-label" <?php if($i%2!=1){echo "style='background: #f6f8f4'";}?>>
+                <div id="contentwrapper">
+                    <div id="contentcolumn">
+                        <div class="iz-label-title">
+                            <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
+                        </div>
+                        <div class="iz-desc">
+                            <?php the_field('mo_ta');?>
                         </div>
                     </div>
-				</div>
+                </div>
+                <div class="iz-logo" id="leftcolumn">
+                    <a class="iz-label-img"href="<?php the_permalink(); ?>" title ="<?php echo strip_shortcodes($recent['post_title']); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <img src="<?php echo $feat_image; ?>" alt="<?php  echo strip_shortcodes($recent['post_title']); ?> " />
+                        <?php else : ?>
+                        <img src="<?php bloginfo('template_url'); ?>/images/no-image.jpg" alt="<?php  echo strip_shortcodes(the_title()); ?> "/>
+                        <?php endif; ?>
+                    </a>
+                    <div class="iz-download">
+                        <a class="btn-download" href="<?php the_field('link_download_game');?>">Tải về</a>
+                    </div>
+                </div>
+            </div>
 				<?php
 			endwhile;
+            wp_reset_query();
+            echo '<div class ="page_nav">';
+            paging('game',$my_query);
+            echo '</div>';
 		?>
 	<?php
 		echo $after_widget;
