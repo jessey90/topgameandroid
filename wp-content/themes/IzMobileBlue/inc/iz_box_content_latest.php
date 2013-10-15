@@ -68,7 +68,7 @@
                 </a>
             </div>
             <div class="iz-download" id="rightcolumn">
-                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download', 'Game <?php echo the_title();?>']);">Tải về</a>
+                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>', '<?php the_field('link_download_game');?>']);">Tải về</a>
             </div>
         </div>
                 <?php

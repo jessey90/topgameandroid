@@ -10,6 +10,11 @@ class Iz_Box_Content_Game extends WP_Widget
   //Displays the Widget in the front-end
     function widget($args, $instance){
 		extract($args);
+        global $before_widget;
+        global $before_title;
+        global $after_title;
+        global $after_widget;
+
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
 		echo $before_widget;
@@ -66,7 +71,7 @@ class Iz_Box_Content_Game extends WP_Widget
                                 </a>
                             </div>
                             <div class="iz-download" id="rightcolumn">
-                                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Tai-Nhieu', 'Download', 'Game <?php echo the_title();?>']);">Tải về</a>
+                                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Tai-Nhieu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>' , '<?php the_field('link_download_game');?>']);">Tải về</a>
                             </div>
                         </div>
 				<?php
