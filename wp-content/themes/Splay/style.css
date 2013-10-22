@@ -124,7 +124,6 @@ a:hover {
     right:0;
 }
 .iz-title {
-    height: 16px;
     color: #ddd;
 }
 .iz-title h2,.iz-title h1,.iz-title h1 a{
@@ -132,6 +131,7 @@ a:hover {
     color: #fff;
     font-size: 12px;
     font-weight: bolder;
+    padding: 6px;
 }
 .iz-title h2 img,.iz-title h1 img{
     vertical-align: text-top;
@@ -466,6 +466,12 @@ a:hover {
     margin: 10px 0;
 }
 
+#filter li{
+    float: left;
+    list-style-type:none;
+    width: 33.3%;
+}
+
 #filter_game span{
     font-weight: bold;
     color: #9d9d9d;
@@ -544,13 +550,16 @@ a:hover {
 }
 
 #table_menutop {
-    height: auto;
+    height: 40px;
     width: 100%;
     max-width: 480px;
 }
 
 #table_menutop a{
     color: #fff;
+    -moz-box-shadow: inset -2px 0px #888;
+    -webkit-box-shadow: inset -2px 0px #888;
+    box-shadow: inset -2px 0px #888;
 }
 
 #menu {
@@ -776,3 +785,4 @@ a.download_11:HOVER {
         height: 30px;
     }
 }
+

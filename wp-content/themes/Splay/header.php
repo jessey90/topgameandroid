@@ -28,6 +28,25 @@
 
           ga('create', 'UA-44745230-1', 'taiungdungandroid.com');
           ga('send', 'pageview');
+
+          $(document).ready(function () {
+              var myurl = "http://taiungdungandroid.com/";
+              var myurl1 = "http://taiungdungandroid.com/game-android/";
+              var myurl2 = "http://taiungdungandroid.com/ung-dung-android/";
+              var currenturl = window.location
+              if(myurl == currenturl) {
+                  var d = document.getElementById("menu_top1");
+                  d.className = d.className + " selected";
+              }
+              if(myurl1 == currenturl) {
+                  var c = document.getElementById("menu_top2");
+                  c.className = c.className + " selected";
+              }
+              if(myurl2 == currenturl) {
+                  var a = document.getElementById("menu_top3");
+                  a.className = a.className + " selected";
+              }
+          });
       </script>
   </head>
   	<body>
@@ -91,26 +110,25 @@
                     </div>
                 </div>
     <div id="menu">
-        <table id="table_menutop" border="0" cellspacing="0" cellpadding="0">
-            <tbody>
-            <tr id="filter">
-                <td>
-                    <a id="menu_top1" href="<?php bloginfo(url);?>" class=" menu_top">
+        <div id="table_menutop">
+            <ul id="filter">
+                <li>
+                    <a href="<?php bloginfo(url);?>" id="menu_top1" class=" menu_top">
                         Home
                     </a>
-                </td>
-                <td>
-                    <a id="menu_top2" href="<?php get_bloginfo('url')?>/game-android/" class=" menu_top  menu_top_center">
+                </li>
+                <li>
+                    <a href="<?php bloginfo(url);?>/game-android/" id="menu_top2" class=" menu_top">
                         Game
                     </a>
-                </td>
-                <td>
-                    <a id="menu_top3" href="<?php get_bloginfo('url')?>/ung-dung-android/" class=" menu_top  menu_top_last">
+                </li>
+                <li>
+                    <a href="<?php bloginfo(url);?>/ung-dung-android/" id="menu_top3" class=" menu_top">
                         App
                     </a>
-                </td>
-            </tr>
-            </tbody></table>
+                </li>
+            </ul>
+        </div>
     </div>
     <!--<div class="iz-category">
 						<form action="<?php /*bloginfo('url'); */?>/" method="get">

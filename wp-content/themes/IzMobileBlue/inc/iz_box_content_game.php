@@ -10,13 +10,9 @@ class Iz_Box_Content_Game extends WP_Widget
   //Displays the Widget in the front-end
     function widget($args, $instance){
 		extract($args);
-        global $before_widget;
-        global $before_title;
-        global $after_title;
-        global $after_widget;
-
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
+
 		echo $before_widget;
 		$file_img_list=get_template_directory_uri().'/images/default-list.png';
 		$file_img=get_template_directory_uri().'/images/default.png';
@@ -28,7 +24,7 @@ class Iz_Box_Content_Game extends WP_Widget
 				if(have_posts()):
 					$game_page = max( 1, $_GET['game-page']);
 					$args1 = array(
-							'posts_per_page' => 7,
+							'posts_per_page' => 20,
 							'paged' => $game_page,
 							'orderby' =>'meta_value_num',
 							'meta_key' => 'views',

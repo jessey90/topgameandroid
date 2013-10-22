@@ -5,7 +5,7 @@
     <?php /* If this is a category archive */
     if (is_category()) {
         ?>
-    <div class="head iz-title" style="height: 15px;" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <div class="ta-title iz-title" style="height: 15px;" xmlns:v="http://rdf.data-vocabulary.org/#">
                     <span typeof="v:Breadcrumb">
                         <a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false)));?>"
                            property="v:title" rel="v:url">
@@ -99,9 +99,8 @@
         $do_not_duplicate = $post->ID;
         ?>
         <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($the_post->ID)); ?>
-            <div class="head""></div>
             <div class="iz-label" <?php if ($i % 2 != 1) {
-                echo "style='background: #f8ffed'";
+                echo "style='background: #f6f8f4'";
             }?>>
                 <div id="contentwrapper">
                     <div id="contentcolumn">

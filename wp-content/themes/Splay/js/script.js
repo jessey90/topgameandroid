@@ -14,9 +14,9 @@ $('#supportLink').click(function (e) {
 $('td a', '#filter').click(function (e) {
     e.preventDefault();
     var target = $(this).attr('data-target');
-    $('li a', '#filter').removeClass('selected');
+/*    $('li a', '#filter').removeClass('selected');
     $(this).addClass('selected');
-/*    $('.box').css('display', 'none');
+    $('.box').css('display', 'none');
     $('#' + target).css('display', 'block');*/
 });
 

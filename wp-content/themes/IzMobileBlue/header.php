@@ -1,15 +1,16 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
-<html xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
 	<title><?php echo strip_shortcodes(wp_title(' ',false)); ?> <?php if(is_home() || is_tag()){ bloginfo('name')."| Tải game hot cho điện thoại"; } else { echo " ";} ?> <?php if ( is_single() ) { ?> <?php } ?> </title>
-	<meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	    <meta http-equiv="Content-Type"	content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+      <meta name="description" content="topgameandroid.com web app tải game & ứng dụng Android miễn phí hay nhất top game app của google play, kho game android, ứng dụng android miễn phí tuyệt đối">
       <meta name="viewport" content="width=device-width; initial-scale=1.0;  maximum-scale=1.0" />
       <meta name="format-detection" content="telephone=no" />
       <meta http-equiv="collapsable" content="none" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-      <meta content="tai game mien phi, wap tai game s40, wap game s40, tai ung dung hot cho nokia s40, tai phan mem mien phi cho di dong" name="keywords">
+      <meta name="keywords" content="game android, ứng dụng android, app cho android, game, android, top game android, top game, top app, top app android, tai game android miễn phí, tải ứng dụng android miễn phí.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="google-site-verification" content="wAp6Hoh6eAHiBIlFKCtbHxpy2mZGfUsQDH9hx3RJxuA" />
 	<!-- Fav and touch icons -->
@@ -41,6 +42,25 @@
           _gaq.push(['_setAccount', 'UA-32394406-5']);
           _gaq.push(['_trackPageview']);
 
+          $(document).ready(function () {
+              var myurl = "http://topgameandroid.com/game-moi-nhat";
+              var myurl1 = "http://topgameandroid.com/";
+              var myurl2 = "http://topgameandroid.com/game-tai-nhieu";
+              var currenturl = window.location
+              if(myurl == currenturl) {
+                  var d = document.getElementById("menu_top1");
+                  d.className = d.className + " selected";
+              }
+              if(myurl1 == currenturl) {
+                  var c = document.getElementById("menu_top2");
+                  c.className = c.className + " selected";
+              }
+              if(myurl2 == currenturl) {
+                  var a = document.getElementById("menu_top3");
+                  a.className = a.className + " selected";
+              }
+          });
+
           (function() {
               var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
               ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -54,38 +74,44 @@
 				<div class="iz-topmenu">
 					<div class="clear"></div>
                     <div id="logo">
-                        <div class="logo-hd"><a href="http://topgameandroid.com/"> <img src="http://gamemobihay.com/wp-content/uploads/2013/10/logo.jpg" alt="GameMobiHay"></a></div>
+                        <div class="logo-hd"><a href="http://topgameandroid.com/"><img src="http://gamemobihay.com/wp-content/uploads/2013/10/logo.jpg" alt="GameMobiHay"></a></div>
                     </div>
 				</div>
                 <div id="filter_game">
                     <div class="chia3">
                         <div class="center">
-                                <a href="<?php bloginfo(url);?>">
-                                    <img src="<?php echo get_template_directory_uri().'/images/1.png';?>" alt="">
+                                <a href="<?php bloginfo(url); echo "/game-moi-nhat";?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/1.png';?>" alt="Mới nhất">
                                 </a>
                         </div>
                         <div class="imageff">
-                            <span>Mới nhất</span>
+                            <a href="<?php bloginfo(url); echo "/game-moi-nhat";?>">
+                                <span id="menu_top1">Mới nhất</span>
+                            </a>
                         </div>
                     </div>
                     <div class="chia3">
                         <div class="center">
-                                <a href="<?php bloginfo(url); echo "/download";?>">
-                                    <img src="<?php echo get_template_directory_uri().'/images/2.png';?>" alt="">
+                                <a href="<?php bloginfo(url);?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/2.png';?>" alt="Hot">
                                 </a>
                         </div>
                         <div class="imageff" style="background: #262626">
-                            <span>Hay nhất</span>
+                            <a href="<?php bloginfo(url);?>">
+                                <span id="menu_top2">Hay nhất</span>
+                            </a>
                         </div>
                     </div>
                     <div class="chia3">
                         <div class="center">
-                                <a href="<?php bloginfo(url); echo "/download";?>">
-                                    <img src="<?php echo get_template_directory_uri().'/images/3.png';?>" alt="">
+                                <a href="<?php bloginfo(url); echo "/game-tai-nhieu";?>">
+                                    <img src="<?php echo get_template_directory_uri().'/images/3.png';?>" alt="Tải nhiều">
                                 </a>
                         </div>
                         <div class="imageff">
-                            <span>Tải nhiều</span>
+                            <a href="<?php bloginfo(url); echo "/game-tai-nhieu";?>">
+                                <span id="menu_top3">Tải nhiều</span>
+                            </a>
                         </div>
                     </div>
                 </div>

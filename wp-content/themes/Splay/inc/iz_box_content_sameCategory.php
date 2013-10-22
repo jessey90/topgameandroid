@@ -10,11 +10,6 @@ class Iz_Box_Content_sameCategory extends WP_Widget
   //Displays the Widget in the front-end 
     function widget($args, $instance){
 		extract($args);
-        global $before_widget;
-        global $after_widget;
-        global $before_title;
-        global $after_title;
-        global $blog_category;
 
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
 		$posts_number = empty($instance['posts_number']) ? '' : (int) $instance['posts_number'];
@@ -25,7 +20,7 @@ class Iz_Box_Content_sameCategory extends WP_Widget
 		else
 			$file_img=get_template_directory_uri().'/images/default.png';
 		if ( $title )
-			echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;
+			echo $before_title . $title . $after_title;
 			global $post;
 			$category = get_the_category($post->ID);
 			$category = $category[0]->cat_ID;

@@ -6,8 +6,8 @@
         <div id="filter_game">
             <div class="chia5">
                 <div class="center-footer">
-                    <a href="<?php bloginfo(url); echo "/category/game-tri-tue-2";?>">
-                        <img src="<?php echo get_template_directory_uri().'/images/game-tri-tue.png';?>" alt="">
+                    <a href="<?php bloginfo(url); echo "/game-tri-tue";?>">
+                        <img src="<?php echo get_template_directory_uri().'/images/game-tri-tue.png';?>" alt="Trí tuệ">
                     </a>
                 </div>
                 <div class="center-footer">
@@ -16,8 +16,8 @@
             </div>
             <div class="chia5">
                 <div class="center-footer">
-                    <a href="<?php bloginfo(url); echo "/category/game-chien-thuat-2";?>">
-                        <img src="<?php echo get_template_directory_uri().'/images/game-chien-thuat.png';?>" alt="">
+                    <a href="<?php bloginfo(url); echo "/game-chien-thuat";?>">
+                        <img src="<?php echo get_template_directory_uri().'/images/game-chien-thuat.png';?>" alt="Chiến thuật">
                     </a>
                 </div>
                 <div class="center-footer">
@@ -26,8 +26,8 @@
             </div>
             <div class="chia5">
                 <div class="center-footer">
-                    <a href="<?php bloginfo(url); echo "/category/game-giai-tri-2";?>">
-                        <img src="<?php echo get_template_directory_uri().'/images/game-giai-tri.png';?>" alt="">
+                    <a href="<?php bloginfo(url); echo "/game-giai-tri";?>">
+                        <img src="<?php echo get_template_directory_uri().'/images/game-giai-tri.png';?>" alt="Giải trí">
                     </a>
                 </div>
                 <div class="center-footer">
@@ -36,8 +36,8 @@
             </div>
             <div class="chia5">
                 <div class="center-footer">
-                    <a href="<?php bloginfo(url); echo "/category/game-hanh-dong-2";?>">
-                        <img src="<?php echo get_template_directory_uri().'/images/game-hanh-dong.png';?>" alt="">
+                    <a href="<?php bloginfo(url); echo "/game-hanh-dong";?>">
+                        <img src="<?php echo get_template_directory_uri().'/images/game-hanh-dong.png';?>" alt="Hành động">
                     </a>
                 </div>
                 <div class="center-footer">
@@ -46,8 +46,8 @@
             </div>
             <div class="chia5">
                 <div class="center-footer">
-                    <a href="<?php bloginfo(url); echo "/category/game-the-thao";?>">
-                        <img src="<?php echo get_template_directory_uri().'/images/game-the-thao.png';?>" alt="">
+                    <a href="<?php bloginfo(url); echo "/game-the-thao";?>">
+                        <img src="<?php echo get_template_directory_uri().'/images/game-the-thao.png';?>" alt="Thể thao">
                     </a>
                 </div>
                 <div class="center-footer">
@@ -55,8 +55,9 @@
                 </div>
             </div>
         </div>
-        <title>Top game android - Tải game android hay nhất</title>
-		&copy; <?php echo date("Y"); ?>, <a href="<?php echo home_url('/'); ?>" title="<?php bloginfo('description'); ?> - <?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a><br />
+        <title>topgameandroid.com web app tải game & ứng dụng Android miễn phí hay nhất top game app của google play, kho game android, ứng dụng android miễn phí tuyệt đối</title>
+        <h1>Tải top Game, ứng dụng android miễn phí hay nhất goole play</h1>
+		&copy; <?php echo date("Y"); ?> <a href="<?php echo home_url('/'); ?>" title="<?php bloginfo('description'); ?> - <?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a><br />
 	</div>
 		<?php wp_footer(); ?>
 	</body>

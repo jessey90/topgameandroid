@@ -2,9 +2,7 @@
 <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 	<div class="iz-box">
 		<div class="iz-title" style="display: none">
-			<h1>
 				<?php seobreadcrumbs(); ?>
-			</h1>
 		</div>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="iz-content-meta">
@@ -17,9 +15,9 @@
                     <?php endif; ?>
                 </a>
             </div>
-            <h2 itemprop="name" class="iz-post-title">
+            <h1 itemprop="name" class="iz-post-title">
                 <?php the_title(); ?>
-            </h2>
+            </h1>
             <div class="div2">
                 <span>
 				    <span class="iz-download-views"><?php if(function_exists('the_views')) { the_views(); } ?></span>

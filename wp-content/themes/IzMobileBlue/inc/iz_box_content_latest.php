@@ -32,7 +32,7 @@
         if(have_posts()):
             $game_page = max( 1, $_GET['game-page']);
             $args1 = array(
-                'posts_per_page' => 7,
+                'posts_per_page' => 20,
                 'paged' => $game_page,
                 'orderby' =>'date',
                 'meta_key' => 'views',
@@ -51,10 +51,10 @@
             <div id="contentwrapper">
                 <div id="contentcolumn">
                     <div class="iz-label-title">
-                        <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
+                        <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><h2></h2><?php echo the_title(); ?></a>
                     </div>
                     <div class="iz-desc">
-                        <?php the_field('mo_ta');?>
+                        <h3><?php the_field('mo_ta');?></h3>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 </a>
             </div>
             <div class="iz-download" id="rightcolumn">
-                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>', '<?php the_field('link_download_game');?>']);">Tải về</a>
+                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>', '<?php the_field('link_download_game');?>']);"><h4>Tải về</h4></a>
             </div>
         </div>
                 <?php

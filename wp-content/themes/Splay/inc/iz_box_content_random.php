@@ -9,11 +9,6 @@ class Iz_Box_Content_Random extends WP_Widget
  
   //Displays the Widget in the front-end 
     function widget($args, $instance){
-        global $before_widget;
-        global $after_widget;
-        global $before_title;
-        global $after_title;
-        global $blog_category;
 
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
@@ -25,7 +20,7 @@ class Iz_Box_Content_Random extends WP_Widget
 		else
 			$file_img=get_template_directory_uri().'/images/default.png';
 		if ( $title )
-			echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;
+			echo $before_title . $title . $after_title;
         global $post;
 		$args1 = array(
 						'posts_per_page' => $posts_number,

@@ -50,7 +50,15 @@ register_sidebar(array(
  ));
 register_sidebar(array(
 	'id'            => 'most-download-content',
-	'name'          => 'Most Download Single',
+	'name'          => 'Game Tải Nhiều',
+	'before_widget' => '<div class="iz-box">',
+	'after_widget' => '</div>',
+	'before_title' => '<div class="iz-title"><h2>',
+	'after_title' => '</h2></div>',
+ ));
+register_sidebar(array(
+	'id'            => 'new-content',
+	'name'          => 'Game Mới Nhất',
 	'before_widget' => '<div class="iz-box">',
 	'after_widget' => '</div>',
 	'before_title' => '<div class="iz-title"><h2>',
@@ -169,7 +177,7 @@ endif;
 // Add top game hot meta
 add_action ( 'add_meta_boxes', 'game_hot_add' );
 function game_hot_add() {
-	add_meta_box ( 'game-hot-box', __ ( 'Top Game Hot' ), 'game_hot_meta_box', 'post', 'normal', 'high' );
+	add_meta_box ( 'game-hot-box', __ ( 'Game Tải Nhiều' ), 'game_hot_meta_box', 'post', 'normal', 'high' );
 }
 function game_hot_meta_box($post) {
 	$values = get_post_custom ( $post->ID );
@@ -179,7 +187,7 @@ function game_hot_meta_box($post) {
 <input type='checkbox' name='top-game-hot' id='is-top-game-hot'
 	<?php echo checked( $check, 'on' );?> />
 
-<label for="top-game-hot"> Thêm bài này vào Top Game Hot</label>
+<label for="top-game-hot"> Thêm bài này vào Game Tải Nhiều Nhất</label>
 <?php
 }
 add_action ( 'save_post', 'game_hot_meta_box_save' );
@@ -194,7 +202,7 @@ function game_hot_meta_box_save($post_id) {
 // Add top application meta
 add_action ( 'add_meta_boxes', 'application_hot_add' );
 function application_hot_add() {
-	add_meta_box ( 'application-hot-box', __ ( 'Top ứng dụng hot' ), 'application_hot_meta_box', 'post', 'normal', 'high' );
+	add_meta_box ( 'application-hot-box', __ ( 'Game Hay Nhất' ), 'application_hot_meta_box', 'post', 'normal', 'high' );
 }
 function application_hot_meta_box($post) {
 	$values = get_post_custom ( $post->ID );
@@ -204,7 +212,7 @@ function application_hot_meta_box($post) {
 <input type='checkbox' name='top-application-hot'
 	id='is-top-application-hot' <?php echo checked( $check, 'on' );?> />
 
-<label for="top-application-hot"> Thêm bài này vào Top ứng dụng hot</label>
+<label for="top-application-hot"> Thêm bài này vào Game Hay Nhất</label>
 <?php
 }
 add_action ( 'save_post', 'application_hot_meta_box_save' );
