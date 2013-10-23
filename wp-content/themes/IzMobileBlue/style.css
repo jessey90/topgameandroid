@@ -143,9 +143,12 @@ a:hover {
     color: #ddd;
 }
 .iz-title h2,.iz-title h1,.iz-title h1 a{
-	color: #FFFFFF;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: bolder;
+    text-transform: uppercase;
+    line-height: 25px;
+    font-style: normal;
+    margin-left: 10px;
 }
 .iz-title h2 img,.iz-title h1 img{
 	vertical-align: text-top;
@@ -560,10 +563,33 @@ a:hover {
 
 .ta-title{
     background-color: #333333;
-    color: #aaaaaa;
+    color: #89c040;
     font-size: 14px;
     font-style: italic;
-    padding: 3px;
+    padding: 8px;
+    float: left;
+    border-left: 7px solid #89c040;
+}
+
+#link_chan_trang{
+    width: 100%;
+    height: 30px;
+}
+
+#link_chan_trang a{
+    font-size: 12px;
+    color: #0000ff;
+    margin-right: 2px;
+    padding-right: 8px;
+}
+
+.tamgiac{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 21.5px 0 21.5px 37.2px;
+    border-color: transparent transparent transparent #333333;
+    float: left;
 }
 
 /*Dành cho màn bé 240px */

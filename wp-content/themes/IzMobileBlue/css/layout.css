@@ -59,22 +59,27 @@ ol.commentlist li div.reply {
 }
 
 body form input#s {
+    border-radius: 0px;
     margin: auto;
     padding: 3px;
-    border: 1px solid #ededed;
+    border: 1px solid #dadada;
     background: #fff;
     color: #222;
-    width: 65%;
+    width: 250px;
     margin-left: 5px;
+    -webkit-box-shadow: inset 0 1px 6px #cecece;
+    -moz-box-shadow: inset 0 1px 6px #cecece;
+    box-shadow: inset 0 1px 6px #cecece;
 }
 
 body form input#searchsubmit {
-    margin: 5px auto;
-    padding: 3px;
     border: 1px solid #c3c3c3;
     background: #e3e3e3;
     color: #555;
-    width: 20%;;
+    width: 20px;
+    height: 28px;
+    position: absolute;
+    left: 243px;
 }
 
 div#respond form input#submit {

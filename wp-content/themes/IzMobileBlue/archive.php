@@ -5,15 +5,17 @@
     <?php /* If this is a category archive */
     if (is_category()) {
         ?>
-    <div class="ta-title iz-title" style="height: 15px;" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <div class="ta-title iz-title" style="height: 26px;" xmlns:v="http://rdf.data-vocabulary.org/#">
                     <span typeof="v:Breadcrumb">
                         <a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false)));?>"
                            property="v:title" rel="v:url">
 
-                            <h2 style="color: #696969;"><!--<img src="<?php /*echo get_template_directory_uri().'/images/default.png';*/?>"/>-->Thể
-                                Loại <?php single_cat_title(); ?></h2>
+                            <h2 style="color: #89c040;"><!--<img src="<?php /*echo get_template_directory_uri().'/images/default.png';*/?>"/>--><?php single_cat_title(); ?></h2>
                         </a>
                     </span>
+    </div>
+    <div class="tamgiac">
+
     </div>
         <?php /* If this is a tag archive */
     } elseif (is_tag()) {
