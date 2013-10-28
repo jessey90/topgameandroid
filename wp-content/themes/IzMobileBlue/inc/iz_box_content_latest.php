@@ -28,6 +28,7 @@
 						'post_status' => 'publish, future');
 		$recent_posts = wp_get_recent_posts( $args1 );?>
 		<div class="iz-content">
+        <div style="height:1px;border-bottom: 1px solid #dfdfdf;"></div>
         <?php
         if(have_posts()):
             $game_page = max( 1, $_GET['game-page']);
@@ -51,7 +52,7 @@
             <div id="contentwrapper">
                 <div id="contentcolumn">
                     <div class="iz-label-title">
-                        <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><h2></h2><?php echo the_title(); ?></a>
+                        <a title="<?php echo esc_attr(the_title());?>" href="<?php the_permalink() ?>"><h2><?php echo the_title(); ?></h2></a>
                     </div>
                     <div class="iz-desc">
                         <h3><?php the_field('mo_ta');?></h3>
@@ -68,7 +69,7 @@
                 </a>
             </div>
             <div class="iz-download" id="rightcolumn">
-                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>', '<?php the_field('link_download_game');?>']);"><h4>Tải về</h4></a>
+                <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Chu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>', '<?php the_field('link_download_game');?>']);"><h4>Tải Game</h4></a>
             </div>
         </div>
                 <?php

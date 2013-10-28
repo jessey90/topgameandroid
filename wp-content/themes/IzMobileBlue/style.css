@@ -47,7 +47,7 @@ a:hover {
 }
 
 .iz-header{
-    height: 242px;
+    height: 289px;
 }
 
 .iz-container{
@@ -143,10 +143,10 @@ a:hover {
     color: #ddd;
 }
 .iz-title h2,.iz-title h1,.iz-title h1 a{
-    font-size: 17px;
+    font-size: 12px;
     font-weight: bolder;
     text-transform: uppercase;
-    line-height: 25px;
+    line-height: 15px;
     font-style: normal;
     margin-left: 10px;
 }
@@ -161,7 +161,7 @@ a:hover {
 .iz-content .iz-label{
     border: 1px solid #dfdfdf;
     border-top: none;
-    height: 100px;
+    height: 120px;
     position: relative;
 }
 .iz-content .iz-label h3 {
@@ -349,7 +349,6 @@ a:hover {
     background: #fff;
     color: #000;
     width: 100%;
-    position: fixed;
     z-index: 999999;
     border-bottom: 1px solid #dfdfdf;
 }
@@ -386,7 +385,7 @@ a:hover {
     float: left;
     font-style: italic;
     color: #333333;
-    max-height: 44px;
+    max-height: 39px;
     overflow: hidden;
 }
 
@@ -409,9 +408,6 @@ a:hover {
     text-align: center;
     height: 40px;
     padding: 5px;
-    -moz-box-shadow: 0px 5px 10px #888;
-    -webkit-box-shadow: 0px 5px 10px #888;
-    box-shadow: 0px 5px 10px #888;
 }
 
 .logo-hd img{
@@ -432,7 +428,7 @@ a:hover {
     margin-top: 15px;
     font-family: Helvetica;
     font-size: 14px;
-    max-height: 19px;
+    max-height: 29px;
     overflow: hidden;
 }
 
@@ -485,6 +481,17 @@ a:hover {
     /*margin: 10px 0;*/
 }
 
+.iz-footer span{
+    font-weight: bold;
+    color: #696969;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.iz-footer span h3{
+    font-size: 14px;
+}
+
 #filter_game span{
     font-weight: bold;
     color: #696969;
@@ -495,7 +502,7 @@ a:hover {
 .chia3{
     width: 33.3%;
     float: left;
-    margin-top: 51px;
+    margin-top: 5px;
 }
 
 .chia3 img{
@@ -530,16 +537,16 @@ a:hover {
 .center-footer{
     margin: 0 auto;
     text-align: center;
-    padding: 5px;
+    padding: 0 5px;
 }
 
-.chia5{
-    width: 19%;
+.chia4{
+    width: 25%;
     float: left;
     height: 100px;
 }
 
-.chia5 img{
+.chia4 img{
     border-radius: 5px;
     width: 50px;
 }
@@ -583,14 +590,96 @@ a:hover {
     padding-right: 8px;
 }
 
+#link_chan_trang h3{
+    font-size: 12px;
+    color: #0000ff;
+    margin-right: 2px;
+    padding-right: 8px;
+    font-weight: normal;
+    float: left;
+}
+
 .tamgiac{
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 21.5px 0 21.5px 37.2px;
+    border-width: 16.5px 0 15.5px 7px;
     border-color: transparent transparent transparent #333333;
     float: left;
 }
+.tamgiac-be{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 11.5px 0 11.5px 7px;
+    border-color: transparent transparent transparent #333333;
+    margin-left: 178px;
+}
+
+/* Swiper Styles */
+
+.device {
+    width: 70%;
+    height: 100px;
+    padding: 10px 40px;
+    margin: 5px auto;
+    position: relative;
+    border-bottom: 1px solid #89c040;
+}
+.device .arrow-left {
+    background: url(images/arrows.png) no-repeat left top;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    width: 17px;
+    height: 30px;
+}
+.device .arrow-right {
+    background: url(images/arrows.png) no-repeat left bottom;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
+    width: 17px;
+    height: 30px;
+}
+.swiper-container {
+    height: 100px;
+    width: 100%;
+}
+.content-slide {
+    padding: 20px;
+    color: #fff;
+}
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.pagination {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom:5px;
+    width: 100%;
+    margin: 0px;
+}
+.swiper-pagination-switch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #999;
+    box-shadow: 0px 1px 2px #555 inset;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.swiper-active-switch {
+    background: #fff;
+}
+
+
+/* !-Swiper Styles */
 
 /*Dành cho màn bé 240px */
 @media (max-width: 240px) {
@@ -603,20 +692,38 @@ a:hover {
     .logo-hd img{
         height: 30px;
     }
-}
-/*Dành cho màn bé 320px */
-@media (max-width: 320px) {
     .iz-header {
-        height: 124px;
+        height: 200px;
     }
 
-    #filter_game span
+}
+/*Dành cho màn bé 320px */
+@media (min-width: 241px) and (max-width: 320px) {
+    .imageff {
+        padding: 1px;
+        line-height: 23px;
+    }
+    .iz-footer span
     {
         font-size: 12px;
     }
-
-    .imageff{
-        padding: 5px 0;
+    #filter_game span {
+        font-size: 10px;
+    }
+    .iz-content-meta .btn-download {
+        bottom: 2px;
+        right: 20px;
+    }
+    .btn-download {
+        font-size: 11px;
+        padding: 5px;
+    }
+    .iz-download .iz-download-spes, .iz-download-views
+    {
+        font-size: 10px;
+    }
+    .iz-header {
+        height: 163px;
     }
     .iz-content .iz-label .iz-label-img img{
         margin: 15px 5px 10px 5px;
@@ -625,19 +732,38 @@ a:hover {
         margin-top: 15px;
     }
     .iz-desc{
+        font-size: 12px;
+        margin-top: 1px;
+        max-height: 41px;
+    }
+    .iz-post-title{
         font-size: 11px;
-        margin-top: 1px
+    }
+    #contentcolumn {
+        margin: 0 76px 0 81px;
+    }
+    .iz-label-title {
+        font-size: 12px;
+        max-height: 45px;
+        overflow: hidden;
+    }
+
+    .iz-footer span h3{
+        font-size: 11px;
+    }
+    .iz-content .iz-label h3 {
+        font-size: 11px;
     }
 }
 /*Dành cho màn 320 -> 480 */
 @media (min-width: 321px) and (max-width: 480px) {
     .iz-header {
-        height: 134px;
+        height: 172px;
     }
 
-    #filter_game span
+    .iz-footer span
     {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .imageff{
@@ -654,15 +780,34 @@ a:hover {
     .iz-desc{
         font-size: 11px;
         margin-top: 1px
+    }
+    .iz-post-title {
+        margin-bottom: 3px;
+        font-weight: bold;
+        color: #000;
+        line-height: 18px;
+        overflow: hidden;
+        max-width: 170px;
+        max-height: 52px;
+        font-size: 12px;
+    }
+    #filter_game span {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    .btn-download{
+        padding: 5px 10px;
     }
 }
 /*Dành cho màn 480 -> 600 */
 @media (min-width: 481px) and (max-width: 600px) {
     .iz-header {
-        height: 157px;
+        height: 191px;
     }
 
-    #filter_game span
+    .iz-footer span
     {
         font-size: 12px;
     }
@@ -682,13 +827,13 @@ a:hover {
         margin-top: 1px
     }
 }
-/*Dành cho màn 601 -> 800 */
-@media (min-width: 601px) and (max-width: 800px) {
+/*Dành cho màn 601 -> 768 */
+@media (min-width: 601px) and (max-width: 768px) {
     .iz-header {
-        height: 175px;
+        height: 204px;
     }
 
-    #filter_game span
+    .iz-footer span
     {
         font-size: 12px;
     }
@@ -706,5 +851,28 @@ a:hover {
     .iz-desc{
         font-size: 11px;
         margin-top: 1px
+    }
+}
+/*Dành cho màn 769 -> 800 */
+@media (min-width: 768px) and (max-width: 800px) {
+    .iz-header {
+        height: 233px;
+    }
+}
+/*Dành cho màn 800 -> 1024 */
+@media (min-width: 801px) and (max-width: 1024px) {
+    .iz-header {
+        height: 237px;
+    }
+}
+/*Dành cho màn 1024 -> 1279 */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .iz-header {
+        height: 262px;
+    }
+}/*Dành cho màn 1280 >> */
+@media (min-width: 1280px) {
+    .iz-header {
+        height: 289px;
     }
 }

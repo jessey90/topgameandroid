@@ -19,7 +19,8 @@ class Iz_Box_Content_App extends WP_Widget
 		if ( $title )
 			/*echo $before_title .'<img src="'.$file_img.'" alt="'.get_bloginfo("name").'"/>'. $title . $after_title;*/
 			?>
-           <div class="iz-content">
+       <div class="iz-content">
+       <div style="height:1px;border-bottom: 1px solid #dfdfdf;"></div>
            <?php
                if(have_posts()):
                    $game_page = max( 1, $_GET['game-page']);
@@ -67,7 +68,7 @@ class Iz_Box_Content_App extends WP_Widget
                                </a>
                            </div>
                            <div class="iz-download" id="rightcolumn">
-                               <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Tai-Nhieu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>' , '<?php the_field('link_download_game');?>']);">Tải về</a>
+                               <a class="btn-download" href="<?php the_field('link_download_game');?>" onClick="_gaq.push(['_trackEvent', 'Trang-Tai-Nhieu', 'Download-Link: <?php the_field('link_download_game'); ?>', 'Game <?php echo the_title();?>' , '<?php the_field('link_download_game');?>']);">Tải Game</a>
                            </div>
                        </div>
                        <?php

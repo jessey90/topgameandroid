@@ -1,11 +1,12 @@
 <?php get_header(); ?>
-<div class="iz-box">
+
     <?php if (have_posts()) : ?>
     <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
     <?php /* If this is a category archive */
     if (is_category()) {
         ?>
-    <div class="ta-title iz-title" style="height: 26px;" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <div id="breadcrumb" style="height: 30px;">
+        <div class="ta-title iz-title" style="height: 15px;" xmlns:v="http://rdf.data-vocabulary.org/#">
                     <span typeof="v:Breadcrumb">
                         <a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false)));?>"
                            property="v:title" rel="v:url">
@@ -13,13 +14,13 @@
                             <h2 style="color: #89c040;"><!--<img src="<?php /*echo get_template_directory_uri().'/images/default.png';*/?>"/>--><?php single_cat_title(); ?></h2>
                         </a>
                     </span>
-    </div>
-    <div class="tamgiac">
-
+        </div>
+        <div class="tamgiac"></div>
     </div>
         <?php /* If this is a tag archive */
     } elseif (is_tag()) {
         ?>
+        <div class="iz-box">
         <div class="iz-title" xmlns:v="http://rdf.data-vocabulary.org/#">
 			<span typeof="v:Breadcrumb">
 				<a href="<?php echo get_category_link(get_cat_ID(single_cat_title('', false)));?>" property="v:title"
@@ -83,6 +84,7 @@
         </div>
         <?php } ?>
 	<div class="iz-content">
+    <div style="height:1px;border-bottom: 1px solid #dfdfdf;"></div>
 	<?php
     //$current_tag = "";
     $tags_id = "";
@@ -164,7 +166,7 @@
                            href="<?=add_query_arg('post_id', $post->ID, $url);?>">
                             <img alt="Bấm vào để tải về máy"
                                  src="<?=get_template_directory_uri() . '/images/download.png'?>"/>
-                            Tải về máy </a>
+                            Tải Game</a>
                         <em class="iz-download-spes">|</em>
                         <span class="iz-download-views"><?php if (function_exists('the_views')) {
                             the_views();

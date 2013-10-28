@@ -23,12 +23,15 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-responsive.min.css" media="screen"/>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" media="screen" />
       <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/idangerous.swiper-2.1.min.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css" media="screen" type="text/css" />
+      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/idangerous.swiper.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/layout.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" media="screen" type="text/css" />
 	<?php wp_head();?>
 <meta name="google-site-verification" content="utwzUrss8wTSs9Sizy22dhsZl9oJFLskChu9nsk26bg" />
       <script src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -77,6 +80,9 @@
                         <div class="logo-hd"><a href="http://topgameandroid.com/"><img src="http://gamemobihay.com/wp-content/uploads/2013/10/logo.jpg" alt="GameMobiHay"></a></div>
                     </div>
 				</div>
+                <div id="exeption1">
+                    <?php get_search_form(); ?>
+                </div>
                 <div id="filter_game">
                     <div class="chia3">
                         <div class="center">

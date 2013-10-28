@@ -45,8 +45,8 @@ register_sidebar(array(
 	'name'          => 'Footer Single',
 	'before_widget' => '<div class="iz-box">',
 	'after_widget' => '</div>',
-	'before_title' => '<div class="iz-title">',
-	'after_title' => '</div>',
+	'before_title' => '<div class="iz-title"><h2>',
+	'after_title' => '</h2></div>',
  ));
 register_sidebar(array(
 	'id'            => 'most-download-content',

@@ -7,7 +7,7 @@ class Iz_Box_Content_sameCategory extends WP_Widget
             array('description' => 'Hiển thị bài viết cùng chuyên mục.'));
     }
  
-  //Displays the Widget in the front-end 
+  //Displays the Widget in the front-end
     function widget($args, $instance){
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? 'Recent From ' : $instance['title']);
@@ -35,8 +35,9 @@ class Iz_Box_Content_sameCategory extends WP_Widget
 				$file_img_list=get_template_directory_uri().'/images/'.get_cat_slug($blog_category).'-list.png';
 			else
 				$file_img_list=get_template_directory_uri().'/images/default-list.png';
-			echo '<div class="iz-content">';
-			echo '<div class="ta-title">Các sản phẩm liên quan</div>';
+
+            echo '<div class="iz-content">';
+            echo '<div class="ta-title iz-title" style="padding:11px"><h2 style="line-height: 0;font-size: 11px">Các Game liên quan</h2></div><div class="tamgiac-be"></div>';
 
             $i = 0;
 			while ($my_query->have_posts()): 
@@ -65,7 +66,7 @@ class Iz_Box_Content_sameCategory extends WP_Widget
                         <?php endif; ?>
                     </a>
                     <div class="iz-download">
-                        <a class="btn-download" href="<?php the_field('link_download_game');?>">Tải về</a>
+                        <a class="btn-download" href="<?php the_field('link_download_game');?>">Tải Game</a>
                     </div>
                 </div>
             </div>

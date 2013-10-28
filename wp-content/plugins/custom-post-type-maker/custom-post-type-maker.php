@@ -4,7 +4,7 @@ Plugin Name: Custom Post Type Maker
 Plugin URI: http://www.bakhuys.com/wordpress/plugin/custom-post-type-maker/
 Description: Custom Post Type Maker lets you create Custom Post Types and custom Taxonomies in a user friendly way.
 Author: Jorn Bakhuys
-Version: 0.1.1
+Version: 0.1.3
 Author URI: http://www.bakhuys.com/
 */
 
@@ -23,7 +23,7 @@ class Cptm {
 		// vars
 		$this->dir = plugins_url( '', __FILE__ );
 		$this->path = plugin_dir_path( __FILE__ );
-		$this->version = '0.1.1';
+		$this->version = '0.1.3';
 
 		// actions
 		add_action( 'init', array($this, 'init') );
@@ -62,7 +62,7 @@ class Cptm {
 			'view_item' => __('View Custom Post Type', 'cptm'),
 			'search_items' => __('Search Custom Post Types', 'cptm'),
 			'not_found' =>  __('No Custom Post Types found', 'cptm'),
-			'not_found_in_trash' => __('No Custom Post Types found in Trash', 'cptm'), 
+			'not_found_in_trash' => __('No Custom Post Types found in Trash', 'cptm'),
 		);
 
 		register_post_type( 'cptm', array(
@@ -91,7 +91,7 @@ class Cptm {
 			'view_item' => __('View Custom Taxonomy', 'cptm'),
 			'search_items' => __('Search Custom Taxonomies', 'cptm'),
 			'not_found' =>  __('No Custom Taxonomies found', 'cptm'),
-			'not_found_in_trash' => __('No Custom Taxonomies found in Trash', 'cptm'), 
+			'not_found_in_trash' => __('No Custom Taxonomies found in Trash', 'cptm'),
 		);
 
 		register_post_type( 'cptm_tax', array(
@@ -110,22 +110,22 @@ class Cptm {
 		));
 
 		// Add image size for the Custom Post Type icon
-		if ( function_exists( 'add_image_size' ) ) { 
+		if ( function_exists( 'add_image_size' ) ) {
 			add_image_size( 'cptm_icon', 16, 16, true );
 		}
 
 	} // # function init()
 
 	public function cptm_admin_menu() {
-	
+
 		// add cptm page to options menu
 		add_utility_page( __("CPT Maker", 'cptm'), __("Post Types", 'cptm'), 'manage_options', 'edit.php?post_type=cptm', '', $this->dir . '/img/cptm-icon.png' );
 		add_submenu_page( 'edit.php?post_type=cptm', __("Taxonomies", 'cptm'), __("Taxonomies", 'cptm'), 'manage_options', 'edit.php?post_type=cptm_tax' );
-		
+
 	} // # function cptm_admin_menu()
 
 	public function cptm_styles( $hook ) {
-	
+
 		// register overview style
 		if ( $hook == 'edit.php' && isset($_GET['post_type']) && ( $_GET['post_type'] == 'cptm' || $_GET['post_type'] == 'cptm_tax' ) ) {
 			wp_register_style( 'cptm_admin_styles', $this->dir . '/css/overview.css' );
@@ -148,7 +148,7 @@ class Cptm {
 
 			wp_enqueue_media();
 		}
-		
+
 	} // # function cptm_styles()
 
 	public function cptm_create_custom_post_types() {
@@ -240,7 +240,7 @@ class Cptm {
 							'view_item'           => __( 'View ' . $cptm_post_type['cptm_singular_name'], 'cptm' ),
 							'search_items'        => __( 'Search ' . $cptm_post_type['cptm_label'], 'cptm' ),
 							'not_found'           => __( 'No ' .  $cptm_post_type['cptm_label'] . ' found', 'cptm' ),
-							'not_found_in_trash'  => __( 'No ' .  $cptm_post_type['cptm_label'] . ' found in Trash', 'cptm' ), 
+							'not_found_in_trash'  => __( 'No ' .  $cptm_post_type['cptm_label'] . ' found in Trash', 'cptm' ),
 						);
 
 						$args = array(
@@ -351,15 +351,15 @@ class Cptm {
 		}
 
 		// flush permalink structure
-		global $wp_rewrite;
-		$wp_rewrite->flush_rules();
+		// global $wp_rewrite;
+		// $wp_rewrite->flush_rules();
 
 	} // # function cptm_create_custom_post_types()
 
 	public function cptm_create_meta_boxes() {
 
 		// add options meta box
-		add_meta_box( 
+		add_meta_box(
 			'cptm_options',
 			__( 'Options', 'cptm' ),
 			array($this, 'cptm_meta_box'),
@@ -367,7 +367,7 @@ class Cptm {
 			'advanced',
 			'high'
 		);
-		add_meta_box( 
+		add_meta_box(
 			'cptm_tax_options',
 			__( 'Options', 'cptm' ),
 			array($this, 'cptm_tax_meta_box'),
@@ -864,12 +864,12 @@ class Cptm {
 
 	public function cptm_save_post( $post_id ) {
 
-		// verify if this is an auto save routine. 
+		// verify if this is an auto save routine.
 		// If it is our form has not been submitted, so we dont want to do anything
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return;
 
-		// if our nonce isn't there, or we can't verify it, bail 
+		// if our nonce isn't there, or we can't verify it, bail
 		if( !isset( $_POST['cptm_meta_box_nonce_field'] ) || !wp_verify_nonce( $_POST['cptm_meta_box_nonce_field'], 'cptm_meta_box_nonce_action' ) ) return;
 
 		// update custom post type meta values
@@ -1168,7 +1168,7 @@ class Cptm {
 			}
 		}
 		if( 'cptm_tax' == $post_type ) {
-			
+
 			// Get all public custom Taxonomies
 			$taxonomies = get_taxonomies( array( 'public' => true, '_builtin' => false ), 'objects' );
 			// Get all custom Taxonomies created by Custom Post Type Maker
@@ -1266,7 +1266,7 @@ class Cptm {
 	function cptm_post_updated_messages( $messages ) {
 
 		global $post, $post_ID;
-	
+
 		$messages['cptm' ] = array(
 			0 => '', // Unused. Messages start at index 1.
 			1 => __( 'Custom Post Type updated.', 'cptm' ),
@@ -1281,7 +1281,7 @@ class Cptm {
 			9 => __( 'Custom Post Type scheduled for.', 'cptm' ),
 			10 => __( 'Custom Post Type draft updated.', 'cptm' ),
 		);
-	
+
 		return $messages;
 
 	} // # function cptm_post_updated_messages()
@@ -1293,11 +1293,11 @@ class Cptm {
 		{
 			return $response;
 		}
-		
-		
+
+
 		$attachment_url = $response['url'];
 		$base_url = str_replace( wp_basename( $attachment_url ), '', $attachment_url );
-		
+
 		if( is_array($meta['sizes']) )
 		{
 			foreach( $meta['sizes'] as $k => $v )
