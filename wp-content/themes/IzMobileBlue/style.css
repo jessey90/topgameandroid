@@ -33,6 +33,13 @@ h4{
     font-weight: normal;
 }
 
+blockquote{
+    border: 1px dashed #D1D0D0;
+    border-left: 3px solid #3099d4;
+    margin: 4px 4px 0px 0px;
+    padding-left: 2px;
+}
+
 a:link {
     color: #3099d4;
     text-decoration: none;
@@ -46,9 +53,9 @@ a:hover {
     text-decoration: none;
 }
 
-.iz-header{
+/*.iz-header{
     height: 289px;
-}
+}*/
 
 .iz-container{
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -475,9 +482,23 @@ a:hover {
     margin: 0 100px 0 81px;
 }
 
+#rightcolumn_s {
+    float: left;
+    width: 40px;
+    margin-left: -50px;
+}
+#contentwrapper_s {
+    float: left;
+    width: 100%;
+}
+#contentcolumn_s {
+    margin-right: 60px;
+}
+
 #filter_game{
     width: 100%;
     float: left;
+    padding-bottom: 2px;
     /*margin: 10px 0;*/
 }
 
@@ -692,9 +713,9 @@ a:hover {
     .logo-hd img{
         height: 30px;
     }
-    .iz-header {
+    /*.iz-header {
         height: 200px;
-    }
+    }*/
 
 }
 /*Dành cho màn bé 320px */
@@ -722,9 +743,9 @@ a:hover {
     {
         font-size: 10px;
     }
-    .iz-header {
+    /*.iz-header {
         height: 163px;
-    }
+    }*/
     .iz-content .iz-label .iz-label-img img{
         margin: 15px 5px 10px 5px;
     }
@@ -757,9 +778,9 @@ a:hover {
 }
 /*Dành cho màn 320 -> 480 */
 @media (min-width: 321px) and (max-width: 480px) {
-    .iz-header {
+    /*.iz-header {
         height: 172px;
-    }
+    }*/
 
     .iz-footer span
     {
@@ -803,9 +824,9 @@ a:hover {
 }
 /*Dành cho màn 480 -> 600 */
 @media (min-width: 481px) and (max-width: 600px) {
-    .iz-header {
+    /*.iz-header {
         height: 191px;
-    }
+    }*/
 
     .iz-footer span
     {
@@ -825,13 +846,21 @@ a:hover {
     .iz-desc{
         font-size: 11px;
         margin-top: 1px
+    }
+    h2 {
+        font-size: 12px;
     }
 }
-/*Dành cho màn 601 -> 768 */
-@media (min-width: 601px) and (max-width: 768px) {
-    .iz-header {
-        height: 204px;
+/*Dành cho màn 601 -> 720 */
+@media (min-width: 601px) and (max-width: 719px) {
+    .iz-label-title {
+        max-height: 31px;
     }
+}/*Dành cho màn 720 -> 768 */
+@media (min-width: 721px) and (max-width: 768px) {
+    /*.iz-header {
+        height: 204px;
+    }*/
 
     .iz-footer span
     {
@@ -851,28 +880,31 @@ a:hover {
     .iz-desc{
         font-size: 11px;
         margin-top: 1px
+    }
+    h2 {
+        font-size: 13px;
     }
 }
 /*Dành cho màn 769 -> 800 */
 @media (min-width: 768px) and (max-width: 800px) {
-    .iz-header {
+    /*.iz-header {
         height: 233px;
-    }
+    }*/
 }
 /*Dành cho màn 800 -> 1024 */
 @media (min-width: 801px) and (max-width: 1024px) {
-    .iz-header {
+    /*.iz-header {
         height: 237px;
-    }
+    }*/
 }
 /*Dành cho màn 1024 -> 1279 */
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .iz-header {
+    /*.iz-header {
         height: 262px;
-    }
+    }*/
 }/*Dành cho màn 1280 >> */
 @media (min-width: 1280px) {
-    .iz-header {
+    /*.iz-header {
         height: 289px;
-    }
+    }*/
 }

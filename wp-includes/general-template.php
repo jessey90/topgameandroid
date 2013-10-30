@@ -178,10 +178,15 @@ function get_search_form( $echo = true ) {
 			</form>';
 		} else {
 			$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '" style="text-align: center">
-				<div>
-					<label class="screen-reader-text" for="s">' . _x( '', 'label' ) . '</label>
-					<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Tìm kiếm..."/>
-					<input type="submit" id="searchsubmit" value="'. esc_attr_x( '', 'submit button' ) .'" />
+                <label class="screen-reader-text" for="s">' . _x( '', 'label' ) . '</label>
+                <div id="contentwrapper_s">
+                    <div id="contentcolumn_s">
+                        <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="Tìm kiếm..."/>
+                    </div>
+                </div>
+                    <div id="rightcolumn_s">
+                        <input type="submit" id="searchsubmit" value="'. esc_attr_x( '', 'submit button' ) .'" />
+                    </div>
 				</div>
 			</form>';
 		}
