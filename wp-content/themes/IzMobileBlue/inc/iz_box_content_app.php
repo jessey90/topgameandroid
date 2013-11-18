@@ -27,7 +27,7 @@ class Iz_Box_Content_App extends WP_Widget
                    $args1 = array(
                        'posts_per_page' => 20,
                        'paged' => $game_page,
-                       'orderby' =>'meta_value_num',
+                       'orderby' =>'date',
                        'meta_key' => 'views',
                        'order' => 'DESC',
                        'meta_query' => array(

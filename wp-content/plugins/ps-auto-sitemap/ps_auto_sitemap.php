@@ -116,7 +116,7 @@ class ps_auto_sitemap {
 		
 		$sitemap_content .= "</ul>\n";
 		if ( ! $this->option['suppress_link'] ) {
-			$sitemap_content .= '<address style="text-align: right; font-size: x-small;">Powered by <a href="http://www.web-strategy.jp/" target="_blank">Prime Strategy Co.,LTD.</a></address>' . "\n";
+			$sitemap_content .= '' . "\n";
 		}
 		
 		if ( ( $cache_dir = $this->check_cache_dir() ) && $this->option['use_cache'] ) {

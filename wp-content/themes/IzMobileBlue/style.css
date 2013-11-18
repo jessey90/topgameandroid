@@ -637,6 +637,10 @@ a:hover {
     margin-left: 178px;
 }
 
+/*Tối ưu Responsive cho Fb Comment Box*/
+.fb-comments, .fb-comments iframe{width: 100% !important;}
+.fb-comments span{width: 100% !important;}
+
 /* Swiper Styles */
 
 .device {
@@ -755,7 +759,7 @@ a:hover {
     .iz-desc{
         font-size: 12px;
         margin-top: 1px;
-        max-height: 41px;
+        max-height: 49px;
     }
     .iz-post-title{
         font-size: 11px;
